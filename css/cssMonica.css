@@ -1,0 +1,86 @@
+body{
+	background-image: url("../img/perfil.png");
+	background-position: center;
+	background-size: cover;
+}
+.menu {
+	height: 52px;
+	width: 978px;
+}
+img.usuario{
+    width: 90px;
+    height: 90px;
+    float: right;
+    margin-right: -30%;		
+    margin-top: 3%;
+}
+p.usuario{
+	float: right;
+    margin-top: 1%;
+    margin-right: -30%;	
+}
+img.logo{
+    width: 175px;
+    height: 175px;
+    margin-left: -1%;
+}
+
+.contenedor {
+    width: 968px;
+}
+
+.cuerpo {
+	height: 700px;
+    /*background-color: #8CD4F2;*/
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 20%;
+    opacity: 0.85;
+}
+
+/*---- MENU PACIENTE —---*/ 
+.pestanas {
+    float: top;
+    font-size: 2ex;
+    font-weight: bold;
+}
+ 
+.pestanas ul{
+    margin-left: -40px;
+    font-size: 17px;
+}
+ 
+.pestanas li{
+    list-style-type: none;
+    float: left;
+    margin: 0px 2px -2px -0px;
+    background: #8CD4F2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    padding: 6px 80px 0px 30px;
+    width: 130px;
+    text-underline-position: auto;
+}
+ 
+.pestanas a:link{
+    text-decoration: none;
+    color: #3870A3;
+}
+.contenidopestanas{
+    clear: both;  
+    background: #8CD4F2;
+    padding: 300px 0px 20px 20px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border: 2px solid CornflowerBlue;
+    width: 140%;
+}
+.footer {
+	height: 50px;
+	width: 139%;
+    background-color: #000010;
+    color: white;
+    text-align: center;
+}
+
