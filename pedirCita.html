@@ -1,39 +1,71 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-	<title>Pedir Cita</title>
-	<link rel="shortcut icon" type="image/x-icon" href="img/YourHealthIco.ico" />
-	<link rel="stylesheet" type="text/css" href="css/cssPedirCita.css">
-	<!--<link rel="stylesheet" href="css/normalize.css" />-->
+    <head>
+        <title>YourHealth</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/YourHealthIco.ico" />
+        <link rel="stylesheet" type="text/css" href="css/cssPedirCita.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-</head>
-<body>
-	<div class = "cabecera">
-		<img class="titulo" src="img/YourHealth.png"><!--</a>-->
-		<img class="avatar" src = "img/usuario.png"><!--Log out</a>-->
-		<p class = "avatar">Hola "usuario "<a href = "desconectarse.html"> Desconectate</a></p>
-	</div>
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-	<div class="contenido">
-                
-        <div class="pestanas">
-            <ul class=lista>
-                <li class="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Datos</a></li>
-                <li class="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Citas</a></li>
-                <li class="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Informes</a></li>
-                <li class="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana4);'>Pedir Cita</a></li>
-            </ul>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="menu">
+                <img class="logo" src="img/YourHealth.png">
+                <img class= "usuario" src="img/usuario.png">
+                <p class = "usuario"> Hola "usuario"<a href="desconectarse.html">Desconectate</a></p>
+            </div>
+             
+            <div class="cuerpo">
+                <div class="pestanas">
+                    <ul class=lista>
+                        <li><a href='Datos.html'>Datos</a></li>
+                        <li><a href='Citas.html'>Citas</a></li>
+                        <li><a href='Informes.htm'>Informes</a></li>
+                        <li><a href='PedirCita.html'>Pedir Cita</a></li>
+                    </ul>
+                </div>
+               <div class="contenidopestanas">
+                    <form>
+                    	<h1> Pedir Cita: </h1>
+                        <h2>Introduzca sus preferencias para el día y la hora</h2>
+                    </form>
+                    <div class="citas">
+
+                    <table class = "citas">
+                    	<tr>
+                    		<th>Seleccione el día</th>
+                    		<th>Seleccione la hora</th>
+                    		<th>Indique teléfono de contacto </th>
+                    	</tr>
+                        	<form>
+	                    		<tr>
+	                    	        <td><input type="date" name="fecha_cita" required></td>
+	                                <td><input type="time" name="hora_cita" required></td>
+	                                <td><input type="tel" name="telefono_cita" required></td>
+                            	</tr>
+                            </form>
+                            
+                        </table>
+                        <a href="index.html"><button type="button" class="boton_pedirCita">Pedir cita</button></a>
+                    </div>
+                </div>
+            </div>
+             
+            </div>
+             
+            <div class="footer">
+                <p>Copyright..</p>
+            </div>
         </div>
- 
-       <!-- <body onload="javascript:cambiarPestanna(pestanas,pestana1);"> -->
- 
-        <div class="contenidopestanas">
-        	
-    	</div>
-    </div>
-
-	<div class = "pie">
-		<p>Este será el pie de página</p>
-	</div>
-</body>
+    </body>
 </html>
