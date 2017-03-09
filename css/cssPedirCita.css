@@ -9,38 +9,26 @@
 
 /*---------- CABECERA -------------*/
 .cabecera{
- 	height: 200px;
-    width: 130%;
-}
-
-img.titulo{
-	width: 170px;
-	height: 170px;
-}
-
-.titulo{
-	float: center;
-	margin-left: 30%;
-	margin-top: 0%;
-	width: 40%;
+ 	height: 52px;
+	width: 978px;
 }
 
 img.avatar{
-	width: 90px;
-	height: 90px;
+    width: 90px;
+    height: 90px;
+    float: right;
+    margin-right: -30%;		
+    margin-top: 3%;
 }
-
-.avatar{
-	float: right;
-	margin-right: 1%;
-	margin-top: 2%;
-	width: 40%;
-}
-
 p.avatar{
-	float:right;
-	margin-top: 20%;
-	margin-right: -40%;
+	float: right;
+    margin-top: 1%;
+    margin-right: -30%;	
+}
+img.titulo{
+    width: 175px;
+    height: 175px;
+    margin-left: -1%;
 }
 /* ---------- MENU -------*/
 
@@ -76,32 +64,32 @@ p.avatar{
 
 /*---------- PEDIR CITA -----------*/
 .cuadro{
-	padding:25px;
+	/*padding:25px;*/
 	border:1px;
 	background-color:#8CD4F2;
-
 }
-/*---- CONTEDENEDOR —---*/
-.contenedor{
+/*---- CONTENIDO —---*/
+.contenido{
     background-color: #8CD4F2;
-    margin: 0 auto;
-    margin-left: 10%;
-    width: 80%;
-    margin-top: 5%;
-    opacity: 0.95;
+    /*margin: 0 auto;*/
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 20%;
+    opacity: 0.85;
 }
 /*---- MENU PACIENTE —---*/ 
-#pestanas {
+.pestanas {
     float: top;
     font-size: 2ex;
     font-weight: bold;
 }
  
-#pestanas ul{
-    margin-left: -40px;    
+.pestanas ul{
+    margin-left: -40px;
+    font-size: 18px;
 }
  
-#pestanas li{
+.pestanas li{
     list-style-type: none;
     float: left;
     text-align: center;
@@ -111,21 +99,22 @@ p.avatar{
     border-top-right-radius: 5px;
     border: 2px solid CornflowerBlue;
     /*border-bottom: dimgray;*/
-    padding: 0px 20px 0px 20px;
+    padding: 6px 55.6px 0px 20px;
     width: 130.8px;
 }
  
-#pestanas a:link{
+.pestanas a:link{
     text-decoration: none;
-    color: CornflowerBlue;
+    /*color: CornflowerBlue;*/
+    color: #3870A3;
 }
  
-#contenidopestanas{
+.contenidopestanas{
     clear: both;  
     background: #8CD4F2;
     padding: 300px 0px 20px 20px;
     border-radius: 5px;
     border-top-left-radius: 0px;
     border: 2px solid CornflowerBlue;
-    width: 920px;
+    width: 140%;
 }
