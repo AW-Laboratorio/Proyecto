@@ -38,6 +38,15 @@ img.logo{
     opacity: 0.85;
 }
 
+
+.footer {
+	height: 50px;
+	width: 139%;
+    background-color: #000010;
+    color: white;
+    text-align: center;
+}
+
 /*---- MENU PACIENTE —---*/ 
 .pestanas {
     float: top;
@@ -70,17 +79,43 @@ img.logo{
 .contenidopestanas{
     clear: both;  
     background: #8CD4F2;
-    padding: 300px 0px 20px 20px;
+    padding: 20px 20px 20px 20px;
     border-radius: 5px;
     border-top-left-radius: 0px;
     border: 2px solid CornflowerBlue;
     width: 140%;
+    height: 80%;
 }
-.footer {
-	height: 50px;
-	width: 139%;
-    background-color: #000010;
-    color: white;
+
+/*------- CITAS ----------*/
+.citas{
+    width: 100%;
+    margin-left: 0%;
+}
+.citas h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+}
+table.citas{
+    font-size: 18px;
     text-align: center;
+    float: center;
+}
+caption.citas{
+    font-size: 30px;
+    margin-left: -3%;
+}
+td, th{
+    text-align: justify;
+}
+img.informe{
+    width: 4%;
+    height: 4%;
+}
+img.calendar{
+    width: 3%;
+    height: 3%;
+    margin-top: -1%;
 }
 
