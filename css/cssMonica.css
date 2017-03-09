@@ -118,4 +118,33 @@ img.calendar{
     height: 3%;
     margin-top: -1%;
 }
-
+.cajaCita{
+    border: 2px solid CornflowerBlue;
+    width: 40%;
+    display: inline-block;
+    padding-left: 12px;
+    margin:10px 50px 10px 20px;
+}
+.cajaCita p{
+    font-size: 16px;
+}
+.cambio{
+    width: 25%;
+    background-color: #008000;
+    color: white;
+    font-size: 16px;
+    margin-left: 40%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+.anular{
+    width: 25%;
+    background-color: #B22222;
+    color: white;
+    font-size: 16px;
+    margin-left: 5%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}

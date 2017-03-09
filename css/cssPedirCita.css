@@ -1,82 +1,52 @@
 ﻿body{
-	background-image: url("../img/perfil.png");
-	background-position: center;
-	background-size: cover;
-	max-height: 50%;
-	max-width: 70%;
-    position: static;
+    background-image: url("../img/perfil.png");
+    background-position: center;
+    background-size: cover;
 }
-
-/*---------- CABECERA -------------*/
-.cabecera{
- 	height: 52px;
-	width: 978px;
+.menu {
+    height: 52px;
+    width: 978px;
 }
-
-img.avatar{
+img.usuario{
     width: 90px;
     height: 90px;
     float: right;
-    margin-right: -30%;		
+    margin-right: -30%;     
     margin-top: 3%;
 }
-p.avatar{
-	float: right;
+p.usuario{
+    float: right;
     margin-top: 1%;
-    margin-right: -30%;	
+    margin-right: -30%; 
 }
-img.titulo{
+img.logo{
     width: 175px;
     height: 175px;
     margin-left: -1%;
 }
-/* ---------- MENU -------*/
 
-/*------------- PIE ------------*/
-.pie{
-	height: 3.8em;
-	width: 143%;
-	background-color: #333;
-	color: #fff;
-	text-align: center;
-	margin-bottom: 0px;
-	margin-top: 400px;
-	margin-left: -1%;
-}
-/*------------ NOTICIAS -----------*/
-.noticias{
-	height: 20%;
-	width: 50%;
-	margin-left: 10%;
-	padding:12px;
-	background-color:#8CD4F2;
-	line-height:1.4;
-	opacity: 0.75;
-	margin-top: 3%;
+.contenedor {
+    width: 968px;
 }
 
-.noticiasBanner{
-	height:55%;
-	width: 55%;
-	margin-left: 69%;
-	margin-top: -4000px;
-}
-
-/*---------- PEDIR CITA -----------*/
-.cuadro{
-	/*padding:25px;*/
-	border:1px;
-	background-color:#8CD4F2;
-}
-/*---- CONTENIDO —---*/
-.contenido{
-    background-color: #8CD4F2;
-    /*margin: 0 auto;*/
+.cuerpo {
+    height: 700px;
+    /*background-color: #8CD4F2;*/
     margin-left: 5%;
     width: 90%;
     margin-top: 20%;
     opacity: 0.85;
 }
+
+
+.footer {
+    height: 50px;
+    width: 139%;
+    background-color: #000010;
+    color: white;
+    text-align: center;
+}
+
 /*---- MENU PACIENTE —---*/ 
 .pestanas {
     float: top;
@@ -86,35 +56,93 @@ img.titulo{
  
 .pestanas ul{
     margin-left: -40px;
-    font-size: 18px;
+    font-size: 17px;
 }
  
 .pestanas li{
     list-style-type: none;
     float: left;
-    text-align: center;
     margin: 0px 2px -2px -0px;
     background: #8CD4F2;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border: 2px solid CornflowerBlue;
-    /*border-bottom: dimgray;*/
-    padding: 6px 55.6px 0px 20px;
-    width: 130.8px;
+    padding: 6px 80px 0px 30px;
+    width: 130px;
+    text-underline-position: auto;
 }
  
 .pestanas a:link{
     text-decoration: none;
-    /*color: CornflowerBlue;*/
     color: #3870A3;
 }
- 
 .contenidopestanas{
     clear: both;  
     background: #8CD4F2;
-    padding: 300px 0px 20px 20px;
+    padding: 20px 20px 20px 20px;
     border-radius: 5px;
     border-top-left-radius: 0px;
     border: 2px solid CornflowerBlue;
     width: 140%;
+    height: 80%;
+}
+
+/*------- CITAS ----------*/
+.citas{
+    width: 100%;
+    margin-left: 0%;
+}
+.contenidopestanas h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contenidopestanas h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+table.citas{
+    font-size: 15px;
+    text-align: center;
+    float: center;
+    margin-top: 5%;
+}
+.citas label{
+    float: center;
+}
+
+td, th{
+    text-align: justify;
+}
+
+.boton_pedirCita {
+    -moz-box-shadow: 0px 10px 14px -7px #276873;
+    -webkit-box-shadow: 0px 10px 14px -7px #276873;
+    box-shadow: 0px 10px 14px -7px #276873;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+    background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+    background-color:#599bb3;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:13px 32px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+    margin-left: 65%;
+    margin-top: 10%;
 }
