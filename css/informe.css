@@ -1,0 +1,168 @@
+body {
+    background-image: url("../img/fondo.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cabecera {
+    height: auto;
+    width: 100%;
+    background-color: #8CD4F2;
+    /*position: fixed;*/
+    margin-top: -1%;
+    margin-left: -0.5%;
+    border-radius: 8px;
+    opacity: 0.95;
+    display: block;
+}
+
+.cuerpo {
+    /*margin-top: 15%;*/
+    display: block;
+    height: 80%;
+    width: 90%;
+    margin-left: 3%;
+}
+
+img.usuario {
+    width: 10%;
+    height: 10%;
+    float: right;
+    margin-top: 1%;
+}
+
+p.usuario {
+    float: right;
+    margin-top: 7.3%;
+}
+
+img.logo {
+    width: 10%;
+    height: 10%;
+    margin-left: 2%;
+}
+
+.pie {
+    clear: both;
+    height: 90px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0px 0px 0px;
+    /*margin-top: 200px;*/
+    margin-top: 2%;
+    display: block;
+}
+
+.pie p {
+    color: ivory;
+    padding: 0% 5%;
+    text-align: center;
+}
+
+.pie img {
+    height: 55%;
+    width: 10%;
+    padding: 0% 5%;
+}
+
+.pie a:link, a:visited {
+    color: #fff;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.pie a:link, .pie a:visited {
+    color: ivory;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+/*-------- MENU PACIENTE/MÉDICO ------*/
+
+.pestanas {
+    float: top;
+    font-size: 10%;
+    font-weight: bold;
+}
+
+.pestanas ul {
+    margin-left: -40px;
+    font-size: 17px;
+}
+
+.pestanas li {
+    list-style-type: none;
+    float: left;
+    margin: 0px 2px -2px -0px;
+    background: #8CD4F2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    padding: 6px 50px 10px 30px;
+    width: auto;
+    text-underline-position: auto;
+}
+
+.pestanas a:link {
+    text-decoration: none;
+    color: #3870A3;
+}
+
+.contenidopestanas {
+    clear: both;
+    background: #8CD4F2;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: auto;
+}
+
+
+/*codigo informe html*/
+
+#codigo {
+    width: 50px;
+}
+
+div. #codigo2 {
+    width: 60px;
+}
+
+#cajas {
+    width: 90px;
+}
+
+#texto {
+    text-align: justify;
+    height: 100%;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+div.row {
+    background-color: #8CD4F2;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    border: 1px solid #1E90FF
+}
+
+div.contenedor {
+    align-content: center;
+    padding-bottom: 113px;
+}
+
+#botones {
+    padding-bottom: 50px;
+}

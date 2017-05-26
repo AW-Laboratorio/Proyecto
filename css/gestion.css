@@ -1,0 +1,231 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        height: 100%;
+    }
+    
+    body {
+        background-image: url("../img/fondo.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /*---------- CABECERA -------------*/
+    
+    img.avatar {
+        width: 90px;
+        height: 90px;
+    }
+    
+    img.titulo {
+        width: 150px;
+        height: 120px;
+        float: center;
+    }
+    
+    div.avatar {
+        padding: 12px 0 11px;
+        margin-right: 10%;
+        float: right;
+        margin-bottom: 10px;
+    }
+    
+    div.titulo {
+        padding: 12px 0 11px;
+        margin-left: 10%;
+        float: left;
+        margin-bottom: 50px;
+    }
+    
+    div.cabecera {
+        margin-bottom: 180px;
+        padding: 12px 20px 11px;
+    }
+    /* ---------- MENU -------*/
+    
+    .menu {
+        padding: 12px 0 11px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .menu ul {
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        font-size: 16.65px;
+    }
+    
+    .menu li {
+        float: left;
+        background-color: #8CD4F2;
+    }
+    
+    .menu li a {
+        display: block;
+        width: 100%;
+        padding: 10px 12.1px;
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid #1E90FF;
+    }
+    
+    .menu li a.active {
+        background-color: #00ccff;
+        color: white;
+    }
+    
+    .menu li a:hover:not(.active) {
+        background-color: #AFEEEE;
+        color: blue;
+    }
+    /*footer*/
+    
+    .footer {
+        width: 100%;
+        background-color: #000010;
+        color: white;
+        padding: 0px 0 40px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+    }
+    
+    div.pie {
+        float: center;
+        position: center;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    /* ------GESTION CITAS /LISTA INFORMES-------*/
+    
+    .gestion-citas {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        /*--**************************---*/
+        margin-bottom: 100px;
+        opacity: 0.85;
+        background: #8CD4F2;
+        padding: 1px 20px 5px 20px;
+        border-radius: 12px;
+        border: 2px solid CornflowerBlue;
+        text-align: justify;
+        font-size: 17px;
+    }
+    
+    .search {
+        border: 2px solid #0a435c;
+        border-radius: 10px;
+        padding: 10px 15px;
+        /* font-size: 30px;*/
+    }
+    
+    .button {
+       border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button-cita {
+        background-color: #8CD4F2;
+        
+        border: 2px solid #1E90FF;
+        padding: 10px 15px;
+        font-size: 15px;
+        color: black;
+        border-radius: 10px;
+    }
+    
+    .button-cita:hover {
+        background-color: #00ffcc;
+        color: white;
+    }
+    
+    .search-medico {
+        border-bottom-style: solid;
+        border-bottom-width: 10px;
+    }
+    .search{
+         border: 2px solid #1E90FF;
+        width: 500px;
+    }
+    
+    
+    .table {
+        display: table;
+        width: 100%;
+        border-bottom-style: solid;
+        border-bottom-width: 5px;
+    }
+    
+    .table-row {
+        display: table-row;
+        width: 100%;
+    }
+    
+    
+    
+    .table-cell, .table-head {
+        text-align: left;
+        display: table-cell;
+        padding: 3px 10px;
+    }
+    /*
+    .table-body {
+        display: table-row-group;
+    }
+    */
+    
+    .doc-table {
+        width: 100%;
+    }
+    
+    .doc-row {
+        text-align: center;
+    }
+    
+    .table-head {
+        /* text-align: center;*/
+        border-bottom-style: solid;
+        border-bottom-width: 10px;
+    }
+    
+    .mod-icon, .add-icon {
+        color: green;
+    }
+    
+    .del-icon {
+        color: red;
+    }
+    
+    .modify-date, .delete-date {
+        text-align: center;
+        border-bottom-style: solid;
+        border-bottom-width: 10px;
+    }
+    
+    div.fecha {
+        margin: auto;
+        text-align: center;
+    }
+    .listainformes {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        /*--**************************---*/
+        margin-bottom: 100px;
+        opacity: 0.85;
+        background: #8CD4F2;
+        padding: 1px 20px 5px 20px;
+        border-radius: 12px;
+        border: 2px solid CornflowerBlue;
+        text-align: justify;
+        font-size: 17px;
+    }

@@ -1,0 +1,437 @@
+﻿/*ESTE CSS ES COMÚN PARA LAS PÁGINAS QUE TENGAN QUE VER CON USUARIOS Y CON PACIENTES*/
+
+/*-------- CUERPO COMÚN --------------*/
+body{
+    background-image: url("../img/fondo.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cabecera{
+    height: auto;
+    width: 100%;
+    background-color: #8CD4F2;
+    /*position: fixed;*/
+    margin-top: -1%;
+    margin-left: -0.5%;
+    border-radius:8px;
+    opacity: 0.95;
+    display: block;
+}
+
+.cuerpo{
+    /*margin-top: 15%;*/
+    display: block;
+    height: 80%;
+    width: 90%;
+    margin-left: 3%;
+}
+
+img.usuario{
+    width: 10%;
+    height: 10%;
+    float: right;
+    margin-top: 1%;
+}
+p.usuario{
+    float: right;
+    margin-top: 7.3%;
+}
+
+img.logo{
+    width: 10%;
+    height: 10%;
+    margin-left: 2%;
+}
+
+.pie{
+    height: 90px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0px 0px 0px;
+    /*margin-top: 200px;*/
+    margin-top: 2%;
+    display: block;
+}
+
+.pie p{
+    color:ivory;
+    float: left;
+    padding: 0% 5%;
+}
+
+.pie img{
+    height: 55%;
+    width: 10%;
+    padding: 0% 5%;
+}
+
+
+.pie a:link, a:visited{
+    color: #fff;
+}
+
+
+a:link   
+{   
+    text-decoration:none;   
+}  
+
+.pie a:link, .pie a:visited{
+    color:ivory;
+    font-size: 18px;
+    text-decoration:none;
+}
+
+
+/*-------- MENU PACIENTE/MÉDICO ------*/
+.pestanas {
+    float: top;
+    font-size: 10%;
+    font-weight: bold;
+}
+ 
+.pestanas ul{
+    margin-left: -40px;
+    font-size: 19px;
+}
+ 
+.pestanas li{
+    list-style-type: none;
+    float: left;
+    margin: 0px 2px -2px -0px;
+    background: #8CD4F2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    padding: 6px 50px 10px 30px;
+    width: auto;
+    text-underline-position: auto;
+}
+ 
+.pestanas a:link, .pestanas a:visited{
+    text-decoration: none;
+    color: #3870A3;
+}
+.contenidopestanas{
+    clear: both;  
+    background: #8CD4F2;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: auto;
+}
+
+/*-------- AGENDA MÉDICO / CITAS PACIENTE / HISTORIAL / INFORMES PACIENTE -------*/
+
+.citas, .historial{
+    width: 100%;
+    margin-left: 0%;
+}
+.citas h1, .historial h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+}
+table.citas, table.historial{
+    font-size: 18px;
+    text-align: center;
+    float: center;
+}
+caption.citas, caption.historial{
+    font-size: 30px;
+    margin-left: -3%;
+}
+td, th{
+    text-align: justify;
+}
+img.informe{
+    width: 4%;
+    height: 4%;
+}
+img.calendar{
+    width: 3%;
+    height: 3%;
+    margin-top: -1%;
+}
+
+/*--------- CITAS PACIENTE -----------------*/
+.cajaCita{
+    border: 2px solid CornflowerBlue;
+    width: 40%;
+    display: inline-block;
+    padding-left: 12px;
+    margin:10px 50px 10px 20px;
+    border-radius: 5px;
+}
+.cajaCita p{
+    font-size: 16px;
+}
+.cambio{
+    width: 25%;
+    background-color: #008000;
+    color: white;
+    font-size: 16px;
+    margin-left: 40%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+.anular{
+    width: 25%;
+    background-color: #B22222;
+    color: white;
+    font-size: 16px;
+    margin-left: 5%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+
+
+/*-------- DATOS MÉDICO / DATOS PACIENTE--------*/
+.modif_datos{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.datos{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+
+/*-------- PEDIR CITA -----------*/
+.boton{
+    margin-left: 45%;
+}
+.boton_pedirCita {
+    display: block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.contenidopestanas h2{
+    font-size: 20px;
+    font-weight: bold;
+    /*margin-left: 30%;*/
+    margin-top: 2%;
+    text-align: center;
+}
+
+.contenidopestanas h1{
+    color:#24699C;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pedirCitas{
+    display: inline-flex;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    padding: 2%;
+    width: 95%;
+}
+
+.caja{
+    border: 2px solid CornflowerBlue;
+    display: inline-block;
+    padding: 2%;
+    margin:0.1%;
+    border-radius: 5px;
+}
+.caja label{
+    font-size: 18px;
+}
+
+/*-------- GESTIÓN ------------*/
+
+/*-------- INFORME -----------*/
+
+/*-------- MODIFICAR PERFIL ---------*/
+.cuadro {
+    clear: both;  
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 48%;
+    height: auto;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+input[type=date], input[type=tel], input[type=text], input[type=email],input[type=password], textarea, select {
+ padding:3px;
+ border:1px solid #58ACFA;
+ border-radius:5px;
+ width:200px;
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ }
+
+ input[type=file]{
+   padding:1px;
+ }
+ 
+.cuadro h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.align{
+    display: block;
+    width: 170px;
+    float: left;
+}
+
+.cuadro div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+}
+
+.validar{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
+/*-------- ANULAR CITA --------*/
+.cancelaCita{ 
+    height: auto;
+    width: 40%;
+    margin-left: 28%;
+    background-color:#8CD4F2;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    font-size: 18px;
+    text-align: center;
+    height: auto;
+    margin-bottom: 10%;
+}
+
+.cancelaCita h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 33%;
+    text-align:left;
+}
+
+.datos p, .datos h4{
+    display: inline;
+    font-size: 18px;
+}
+.alinearContenido{
+    display: inline-flex;
+    width: 45%;
+}
+
+.datosP1 h1{
+    text-align: center;
+}
+.datosP {
+    font-size: 21px;
+}
+
+.datosP1 .datos{
+    font-size: 18px;
+    width: 100%;
+}
+.datosP1 input{
+    visibility: hidden;
+}
+
+.modifica form{
+    margin-left: 10%;
+    width: 100%;
+}
+.modifica fieldset {
+    border: 2px solid CornflowerBlue;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 auto;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+.modifica legend {
+    color: #fff;
+    background: #599bb3;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 6px;
+}
+
+.modifica button{
+    display: block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:5px 5px;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+#passNO{
+    width: 5%;
+    height: 5%;
+}
+
+#passOk{
+    width: 5%;
+    height: 5%;
+}
+
+#emailNO{
+    width: 5%;
+    height: 5%;
+}
+
+#emailOk{
+    width: 5%;
+    height: 5%;
+}
+
+#passIgualesNO{
+    width: 5%;
+    height: 5%;
+}
+
+#passIgualesOk{
+    width: 5%;
+    height: 5%;
+}

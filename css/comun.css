@@ -1,0 +1,1212 @@
+body{
+    background-image: url("../img/fondo.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**** INDEX ****/
+/*--- CABECERA, MENU Y PIE COMUN---*/
+.cabecera{
+    height: auto;
+    width: 100%;
+    background-color: #8CD4F2;
+    /*position: fixed;*/
+    margin-top: -1%;
+    margin-left: -0.5%;
+    border-radius:8px;
+    opacity: 0.95;
+    display: block;
+}
+
+.menu{
+   margin-left: 13%;
+   display: inline-block;
+   margin-top: -1%;
+}
+
+.menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    font-size: 17px;
+}
+
+.menu li{
+    float: left;
+    background-color: #24699C;
+    border-radius:20px;
+    border: 1px solid #1E90FF;
+}
+ 
+.menu li a {
+    display: block;
+    padding: 12px 26.6px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu li a.active {
+    background-color: #00ccff;
+    color: white;
+    border-radius:20px;
+    border: 1px solid #1E90FF;
+}
+
+.menu li a:hover:not(.active) {
+    background-color: #AFEEEE;
+    color: blue;
+    border-radius:20px;
+    border: 1px solid #1E90FF;
+}
+
+.menuNavegable li a:link {
+    color:#FFA842;
+}
+
+.menuNavegable li a:visited {
+    color:#FFA842;
+}
+
+.menuNavegable ul{
+    position:absolute;
+    text-decoration: none;
+    opacity: 0;
+    left: 0;
+    margin: 0;
+}
+
+/*--- Visibles cuando se pone el cursor encima*/
+/*.menuNavegable li:hover > ul {*/
+.menuNavegable li.serv:hover ul {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    left:auto;
+    /*padding-left: 40.7%;*/
+}
+
+.menuNavegable li ul{
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: heiht .25s ease .1s;
+}
+
+/*.menuNavegable li:hover > ul li{*/
+.menuNavegable li.serv:hover ul{
+    height: auto;
+    overflow: visible;
+    padding: 0;
+}
+
+.cuerpo{
+    /*margin-top: 15%;*/
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+.pie{
+    height: 90px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0px 0px 30px;
+    margin-top: 2%;
+    display: block;
+}
+
+.pie p{
+    float: left;
+    padding: 0% 3%;
+}
+.pie img{
+    height: 55%;
+    width: 10%;
+    padding: 0% 3%;
+}
+
+.pie a:link, .pie a:visited{
+    color:ivory;
+    font-size: 18px;
+    text-decoration:none;
+}
+
+/*--- FOTO DEL LOGO CENTRADO ---*/
+img.titulo{
+    width: 170px;
+    height: 170px;
+}
+
+.titulo{
+    float: left;
+    width: 40%;
+}
+.entrar{
+    float: right;
+    margin-right: 3%;
+    font-size: 18px;
+}
+
+.entrar a:link {
+    color:#24699C;
+    text-decoration:none;
+}
+
+.entrar a:visited {
+    color:#24699C;
+}
+
+/*--- FOTO DEL USUARIO ---*/
+img.usuario{
+    width: 90px;
+    height: 90px;
+    float: right;
+    margin-right: 30%;     
+    margin-top: 5%;
+}
+p.usuario{
+    float: right;
+    margin-top: 1%;
+    margin-right: 20%; 
+}
+
+/*------------ NOTICIAS DEL INDEX-----------*/
+.noticias{
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 5%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+.noticias h4, .noticias p{
+    font-size: 18px;
+}
+
+.noticias a:link {
+    color:#24699C;
+    text-decoration:none;
+}
+
+.noticias a:visited {
+    color:#24699C;
+}
+
+.noticiasBanner{
+    height: 400px;
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.data-u ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    /*- Cada 20 segundos cambia el banner infinitamente -*/
+    /*-Para que cuando salga de la ultima imagen no salte bruscamente a la primera -*/
+    animation: cambio 20s infinite alternate;
+}
+
+.noticiasBanner li{
+    width: 100%;
+    list-style: none;
+}
+
+.noticiasBanner img{
+    width: 100%;
+}
+
+@keyframes cambio{
+
+    /*- Durante 4 segundos estara la primera imagen-*/
+    0% {margin-left: 0; }
+    20% { margin-left: 0; }
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+        .jssorb01 {
+            position: absolute;
+        }
+        .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 12px;
+            height: 12px;
+            filter: alpha(opacity=70);
+            opacity: .7;
+            overflow: hidden;
+            cursor: pointer;
+            border: #000 1px solid;
+        }
+        .jssorb01 div { background-color: gray; }
+        .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+        .jssorb01 .av { background-color: #fff; }
+        .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+        .jssora05l, .jssora05r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background: url('img/a17.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora05l { background-position: -10px -40px; }
+        .jssora05r { background-position: -70px -40px; }
+        .jssora05l:hover { background-position: -130px -40px; }
+        .jssora05r:hover { background-position: -190px -40px; }
+        .jssora05l.jssora05ldn { background-position: -250px -40px; }
+        .jssora05r.jssora05rdn { background-position: -310px -40px; }
+        .jssora05l.jssora05lds { background-position: -10px -40px; opacity: .3; pointer-events: none; }
+        .jssora05r.jssora05rds { background-position: -70px -40px; opacity: .3; pointer-events: none; }
+
+
+.citaOnline{
+    width: 45%;
+    margin-left: 3%;
+    margin-top: 2%;
+    border-radius: 8px;
+}
+
+.listaQuirur{
+    width: 53%;
+    margin-left: 23%;
+    margin-top: -6.5%;
+    border-radius: 8px;
+}
+
+.donaSangr{
+    width: 47%;
+    margin-left: 50%;
+    margin-top: -6.5%;
+    border-radius: 8px;
+}
+
+.fotosIndex{
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    background-color:#8CD4F2;
+}
+
+/*--- PRESENTACION (CONOCENOS) ---*/
+.informacion{
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.informacion h1{
+    color:#24699C;
+}
+.informacion p{
+    text-align: justify;
+    padding: 8px;
+    font-size: 18px;
+}
+
+/*--- LISTA QUIRURGICA ---*/
+.contenido{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+.contenido h1{
+    color:#24699C;
+}
+.contenido p{
+    text-align: justify;
+    padding: 8px;
+    font-size: 18px;
+}
+
+
+/*--- CUADRO MEDICO ---*/
+.busqueda{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    text-align: justify;
+}
+
+.textoBuscar, .nombreTitulo, .especialidad{
+    margin-top: 5%;
+    display: inline-block;
+    padding: 0px 20px;
+    margin-bottom: 3%;
+}
+
+.boton_limpiar{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+
+.boton_buscar{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 20%;
+    margin-top: 2%;
+
+}
+
+.boton_enviar{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 35%;
+    margin-right: 25%;
+    padding-right: 5%;
+    float: left;
+}
+
+.listaMedicos{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.listaMedicos ul{
+    display: inline-block;
+    list-style-type: square;
+}
+
+.listaMedicos ul h4{
+    font-size: 20px;
+    text-align: center;
+    color:#24699C;
+}
+
+.listaMedicos li{
+    font-size: 17px;
+}
+
+
+/*--- NUESTRO CENTRO ---*/
+.nav{
+    list-style-type: none;
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+
+}
+
+.resumen{
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    display: block;
+    border: 1px solid CornflowerBlue;
+}
+
+.resumen li{
+    cursor: auto;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0.5%;
+}
+
+.resumen a:link, .resumen a:visited, .resumen h2 {
+    color:#24699C;
+    text-decoration:none;
+}
+
+.muestra{
+    /*position:relative;*/
+    text-decoration: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    text-align: justify;
+}
+.muestra:target{
+    /*position:relative;*/
+    text-decoration: none;
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+.muestra li{
+    font-weight: normal;
+    font-size: 18px;
+    list-style-type: square;
+    margin-left: 4%;
+}
+.muestra p{
+    font-weight: normal;
+    font-size: 18px;
+    margin-left: 2%;
+}
+.muestra h4{
+    text-align: justify;
+    font-size: 18px;
+    margin-left: 2%;
+}
+
+
+/*--- SERVICIOS MEDICOS, SERVICIOS CENTRALES, SERVICIOS MATERNO, SERVICIOS QURURGICOS ---*/
+.listaServicios{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    display: inline-block;
+}
+
+.listaServicios ul li{
+    padding-right: : 2px; 
+    display: inline; 
+    padding-left: : 2px; 
+    float: left; 
+    padding-bottom:  2px; 
+    width: 30%; 
+    padding-top: 2px;
+    float: left;
+    font-size: 17px;
+}
+
+.listaServicios h2{
+    color: #3870A3;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*--- ATENCION PRIMARIA ---*/
+.listaCentros{
+    list-style-type: none;
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.listaCentros ul{
+    display: inline-block;
+    text-align: justify;
+}
+
+
+.listaCentros a:link, .listaCentros a:visited{
+    color:#24699C;
+    text-decoration:none;
+}
+.listaCentros h1, .listaCentros h2, .listaCentros h3{
+    color:#24699C;
+    font-weight: bold;
+}
+.listaCentros h2{
+    margin-left: 2%;
+}
+/*--- LOGIN ---*/
+
+.cuerpoLogin{ 
+    height: 100%;
+    width: 30%;
+    margin-left: 25%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    min-width: 40em;
+}
+
+.cuerpoLogin div{
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:20%;
+}
+
+.cuerpoLogin h1{
+    color: #3870A3;
+    font-size: 25px;
+    font-weight: bold;
+    /*padding-left: 28%;*/
+    text-align:center;  
+}
+
+.validarMedico{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.validarPaciente{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+
+.validarAdministrador{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.align{
+    display: block;
+    width: 170px;
+    float: left;
+}
+
+/*--- LOGOUT ---*/
+.cuerpoLogout{ 
+    height: auto;
+    width: 10%;
+    margin-left:25%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    display: block;
+    border: 1px solid CornflowerBlue;
+    min-width: 40em;
+}
+
+.cuerpoLogout h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 23%;
+}
+
+.cuerpoLogout p{
+    padding-left:20%;
+}
+/*--- CONFIRM MODIFICACION DATOS ---*/
+.cuerpoConfirm{ 
+    height: auto;
+    width: 38%;
+    margin-left: 28%;
+    margin-right: -10%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    display: block;
+    border: 1px solid CornflowerBlue;
+}
+
+.cuerpoConfirm h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 23%;
+}
+
+.cuerpoConfirm p{
+    padding-left:100px;
+}
+
+/*--- REGISTRO ---*/
+.cuerpoRegistro{ 
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    display: block;
+    border: 1px solid CornflowerBlue;
+    min-width: 40em;
+}
+
+.cuerpoRegistro div{
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin-left: 25%;
+}
+
+.cuerpoRegistro h1{
+    color: #3870A3;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 40%;
+}
+.cuerpoRegistro div p{
+    font-style: italic;
+}
+input[type=date], input[type=tel], input[type=text], input[type=email],input[type=password], textarea, select {
+ padding:3px;
+ border:1px solid #58ACFA;
+ border-radius:5px;
+ width:200px;
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ }
+
+.validar{
+
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 40%;
+    margin-top: 2%;
+
+}
+#emailNO{
+    width: 4%;
+    height: 4%;
+}
+
+#emailOk{
+    width: 5%;
+    height: 5%;
+}
+
+#passIgualesNO{
+    width: 4%;
+    height: 4%;
+}
+
+#passIgualesOk{
+    width: 5%;
+    height: 5%;
+}
+#dniNO{
+    width: 4%;
+    height: 4%;
+}
+
+#dniOk{
+    width: 5%;
+    height: 5%;
+}
+
+/*--- ACTIVIDADES ---*/
+
+.calendarioActividades{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    text-align: justify;
+}
+
+/*.calendario{
+    margin-left: 4%;
+    margin-top:5%;
+    font-size: 18px;
+    width: 20%;
+    border: 1px solid CornflowerBlue;
+    padding: 2%;
+}*/
+
+.evento, .calendar{
+    display: inline-block;   
+}
+.calendar{
+    margin-left: 5%;
+    width: 30%;
+    font-size: 18px;
+}
+.evento{
+    width: 50%;
+}
+.evento h2{
+    color:#24699C;
+}
+
+/*--- NOTICIAS MENU ---*/
+.noticiasMenu{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.noticiasMenu a:link {
+    color:#24699C;
+    text-decoration:none;
+}
+
+.noticiasMenu a:visited {
+    color:#24699C;
+}
+
+.noticiasMenu h1{
+    color:#24699C;
+    font-weight: bold;
+}
+
+.noticia p{
+    text-align: justify;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.noticia h4 {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.noticia h5 {
+    text-align: justify;
+    font-size: 16px;
+}
+
+
+/*--- COOKIES ---*/
+.cookiesPolitica{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.cookiesPolitica p{
+    text-align: justify;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.cookiesPolitica li{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 3%;
+    list-style-type: square;
+    color:#24699C;
+}
+.cookiesPolitica h1, .cookiesPolitica h2{
+    color:#24699C;
+    font-weight: bold;
+}
+
+p.cp{
+    font-size: 18px;
+    margin-left: 2%;
+}
+
+/*ESTILO PROTECCION DE DATOS*/
+.protecdatos{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.protecdatos h1, .protecdatos h2{
+    color:#24699C;
+    font-weight: bold;
+}
+
+.protecdatos > p {
+    text-align: justify;
+    padding: 8px;
+}
+/*------ FORO -----------*/
+.foro{
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    display: inline-block; 
+    text-align: center;
+}
+.foro h1, .foro h3{
+    display: block;
+    padding: -1%;
+    margin: 1%
+}
+.tablaForo{
+    border: 2px solid CornflowerBlue;
+    width: 90%;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 3%;
+}
+
+.tablaForo th{
+    border: 2px solid CornflowerBlue;
+    background-color: CornflowerBlue;
+    width: 70%;
+    font-weight: bold;
+}
+
+.tablaForo td{
+    background-color: #CCFFEE;
+    text-align: center;
+}
+
+.tema{
+    background-color: #CCFFEE;  
+    text-align: justify;
+}
+.masPags{
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+/*-- DONA SANGRE --*/
+.cuerpoDonaSangre{
+    height: 20%;
+    width: 90%;
+    margin-left: 5%;
+    padding:12px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.cuerpoDonaSangre h1{
+    color:#24699C;
+    font-weight: bold;
+}
+
+/*----- VALORA MEDICO -------*/
+.valora{
+    width: 80%;
+    margin-left: 5%;
+    padding: 3%;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 3%;
+    margin-left: 8%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+.valora h2{
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.imagen{
+    display: inline-block;
+    float: left;
+}
+.foto{
+    height: 40%;
+    width: 40%;
+}
+
+.contenidoValora{
+    font-size: 18px;
+    display: inline-block;
+    margin-top: -30%;
+    margin-left: 45%;
+}
+.contenidoValora label{
+    font-size: 20px;
+}
+.contenidoValora select{
+    font-size: 16px;
+    margin-left: -3%;
+}
+.contenidoValora .especialidad, .contenidoValora .medico,
+.contenidoValora .nombres, .contenidoValora .puntuacion{
+    display: block;
+    margin: 1%;
+    width: 100%;
+    padding: 4%;
+}
+
+.puntuacion a{
+    font-size: 24px;
+}
+.valoraBoton{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    padding:2% 4% 2% 4%;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+
+/*---- MENSAJES FORO ------*/
+
+.cajaForo{
+    border: 2px solid CornflowerBlue;
+    width: 93%;
+    display: block;
+    padding: 1% 1% 1% 1%;
+    margin:10px 50px 10px 20px;
+    border-radius: 5px;
+    background-color: #CCFFEE;
+}
+.cajaForo h3{
+    text-align: left;
+}
+p.fecha{
+    text-align: left;
+    font-size: 12px;
+    margin-left: 1%;
+}
+p.texto{
+    text-align: justify;
+}
+.links{
+    display: block;
+}
+.links a{
+    text-decoration: none;
+    text-align: right;
+}
+.add{
+    display: block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    padding:1% 2% 1% 2%;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+/*----- NUEVO COMENTARIO -----*/
+.cajaCont{
+    width: 80%;
+    display: block;
+    padding: 1% 2% 1% 2%;
+    margin:10px 50px 10px 20px;
+    line-height: 1.4;
+}
+.cajaCont label{
+    display: block;
+    float: left;
+    margin-left: 20%;
+    font-size: 16px;
+}
+
+.cajaCont #nombre{
+    margin-left: -40%;
+}
+
+#msj{
+    margin-top: 3%;
+    height: 20em;
+    width: 50em;
+    float: left;
+    margin-bottom: 5%;
+    margin-left: -8%;
+}
+
+.boton .add{
+    display: block;
+    margin-top: 27%;
+    margin-left: -40%;
+}
+.foro a:link{
+    text-decoration: none;
+}
+.foro h1{
+    color:#24699C;
+    font-weight: bold;
+}
+.cajaCont, .botton{
+    display: block;
+}
+/*------- CONTACTO -------*/
+.contacto {
+    height: 30%;
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 2%;
+    padding:12px;
+    padding-left: 10%; 
+    background-color:#8CD4F2;
+    line-height:1.4;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+    
+}
+.contacto h1{
+    font-size:30px;
+    color:#24699C;   
+} 
+ 
+.contacto h2 {
+    font-size: 25px;
+    color:#24699C;
+ }
+
+.contacto .align{
+    display: block;
+    width: 140px;
+    float: left;
+}
+
+.contacto label{
+    display: inline;
+}
+
+.contacto input[type=text], .contacto input[type=email], .contacto textarea, .contacto select {
+    padding:3px;
+    border:1px solid #58ACFA;
+    border-radius:5px;
+    width:200px;
+    box-shadow:1px 1px 2px #C0C0C0 inset;
+ }
+
+.contacto div {
+    margin-top:5px;
+}
+
+.contacto input[type=submit]{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+

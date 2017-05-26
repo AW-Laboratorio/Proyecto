@@ -1,0 +1,60 @@
+.cuerpo {
+    height: 30%;
+    width: 40%;
+    margin-left: 18%;
+    padding:14px;
+    padding-left: 55px;
+    background-color:#8CD4F2;
+    line-height:1.4;
+    margin-top: 15%;
+    border-radius:8px;
+    border: 1px solid CornflowerBlue;
+}
+
+.contacto h1{
+    font-size:30px;
+    margin-bottom: -10px;
+	
+} 
+ 
+.contacto h2 {
+   margin-top: 40px;
+   margin-bottom: 15px;
+   font-size: 25px;
+   color:#24699C;
+ }
+
+.align{
+    display: block;
+    width: 140px;
+    float: left;
+}
+
+label{
+    display: inlign;
+}
+
+input[type=text], input[type=email], textarea, select {
+ padding:3px;
+ border:1px solid #58ACFA;
+ border-radius:5px;
+ width:200px;
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ }
+
+div {
+ margin-top:5px;
+ }
+
+input[type=submit]{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 15%;
+    margin-top: 2%;
+}
