@@ -1,38 +1,39 @@
 <?php
-	
-	/*require_once '/../DaoScripts/DaoForo.php';*/
+  
+  /*require_once '/../DaoScripts/DaoForo.php';*/
   namespace estatica\includes\ModelScripts;
   use \estatica\includes\DaoScripts\DaoForo as DF;
+  use ArrayObject;
   
-	class GestorForo{
+  class GestorForo{
 
-		private $dao;
+    private $dao;
 
-		function __construct(){
-			$this->dao = new DaoForos();
-			if(!isset($_SESSION)) session_start();
-		}
+    function __construct(){
+      $this->dao = new DaoForos();
+      if(!isset($_SESSION)) session_start();
+    }
 
-		public static function getForo($IdForo){
-			$ID = htmlspecialchars(trim(strip_tags($IdForo)));
-			return (DF::seleccionaForo($ID));
-		}
+    public static function getForo($IdForo){
+      $ID = htmlspecialchars(trim(strip_tags($IdForo)));
+      return (DF::seleccionaForo($ID));
+    }
 
-		public static function insertarForo($Nombre, $Tema, $UltParticipante, $Creador){
-	      	
+    public static function insertarForo($Nombre, $Tema, $UltParticipante, $Creador){
+          
             $Nombre = htmlspecialchars(trim(strip_tags($Nombre)));
-	        $Temma = htmlspecialchars(trim(strip_tags($Tema)));
-	        $UltParticipante = htmlspecialchars(trim(strip_tags($UltParticipante)));
-	        $Creador = htmlspecialchars(trim(strip_tags($Creador)));
+          $Temma = htmlspecialchars(trim(strip_tags($Tema)));
+          $UltParticipante = htmlspecialchars(trim(strip_tags($UltParticipante)));
+          $Creador = htmlspecialchars(trim(strip_tags($Creador)));
 
-	        DF::insertaForo(/*$IdForo,*/ $Nombre, $Tema, $UltParticipante, $Creador);
-      	}
+          DF::insertaForo(/*$IdForo,*/ $Nombre, $Tema, $UltParticipante, $Creador);
+        }
 
-      	public static function modificaTema($Tema, $IdForo){
-      		$Tem = htmlspecialchars(trim(strip_tags($Tema)));
-      		$ID = htmlspecialchars(trim(strip_tags($IdForo)));
-			return (DF::modificaDireccion($Tema, $IdForo));
-      	}
+        public static function modificaTema($Tema, $IdForo){
+          $Tem = htmlspecialchars(trim(strip_tags($Tema)));
+          $ID = htmlspecialchars(trim(strip_tags($IdForo)));
+      return (DF::modificaDireccion($Tema, $IdForo));
+        }
 
         public static function borrarForo($Tema){
             $Tema = htmlspecialchars(trim(strip_tags($Tema)));
@@ -50,9 +51,9 @@
         }
         
         public static function getUltimoForo(){
-      		 return (DF::cogeUltimoForo());
-      	}
+           return (DF::cogeUltimoForo());
+        }
 
-	}
+  }
 
 ?>

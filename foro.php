@@ -24,7 +24,13 @@
 			<div class = "foro">
 				<h1>Foro Your Health: Pregunta y valóranos</h1>
 				<h3>Tu opinión nos importa. ¡Compártela!</h3>
-				
+				<table class="tablaForo">
+				<tr>
+				    <th>Tema</th>
+				    <th>Creador</th> 
+				    <th>Respuestas</th>
+				    <th>Último mensaje</th>
+				  </tr>
 				<?php 
                 	$app = App::getSingleton();
                    // $vista = new ForoVista();
@@ -32,7 +38,7 @@
                     FV::listaForo();
                     
                 ?>
-                
+                </table>
 				<!--<div class="masPags">
 					<a href="foro.php"><p><< 1 2 3 Más >></p></a>
 				</div>-->

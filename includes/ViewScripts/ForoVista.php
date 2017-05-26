@@ -9,11 +9,11 @@
         function __construct(){
             
             /*require_once '/../ModelScripts/GestorForo.php';*/
-			//$this->ListaForo = new GestorForo();
+            //$this->ListaForo = new GestorForo();
             $ListaForo = GF::GestorForo();
         }
         
-        public function listaForo(){
+        public static function listaForo(){
             $lista = GF::getListaForo(); //$this->ListaForo->getListaForo();
             $iterator = $lista->getIterator();
             
@@ -25,11 +25,12 @@
                 $Creador = $iterator->current()->getCreador();
                 $html = <<<EOS
                 
-                <div class="Foro">
-                    <h5>$Nombre</h5>
-                    <h4><a href="#"> $Tema</a></h4>
-                    <p>$Creador</p>
-                </div>
+                <tr>
+                    <td class="tema"><a href="foro.php">$Tema</a></td>
+                    <td>$Creador</td> 
+                    <td>5</td>
+                    <td>$UltParticipante</td>
+                </tr>
 EOS;
             echo $html;
             $iterator->next();   
@@ -37,7 +38,7 @@ EOS;
        
         }
         
-        public function muestraUnForo(){
+        public static function muestraUnForo(){
             
             $lista = GF::getUltimoForo(); //$this->ListaForo->getUltimoForo();
             

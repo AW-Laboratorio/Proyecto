@@ -25,7 +25,7 @@
 			return $this->Nombre;
 		}
 		public function getTema(){
-			return $this->tema;
+			return $this->Tema;
 		}
 		public function getUltParticipante(){
 			return $this->UltParticipante;
