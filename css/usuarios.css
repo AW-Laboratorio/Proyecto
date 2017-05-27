@@ -158,6 +158,39 @@ img.calendar{
     margin-top: -1%;
 }
 
+.cajaInforme{
+    border: 2px solid CornflowerBlue;
+    width: 93%;
+    display: block;
+    padding: 1% 1% 1% 1%;
+    margin:10px 50px 10px 20px;
+    border-radius: 5px;
+    background-color: #8CD4F2;
+}
+.cajaInforme h2{
+    text-align: left;
+}
+.links button{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+.historial .datos{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+.cajaInforme .datos h4{
+    font-size: 22px;
+}
 /*--------- CITAS PACIENTE -----------------*/
 .cajaCita{
     border: 2px solid CornflowerBlue;

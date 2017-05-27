@@ -52,6 +52,19 @@ class DaoInforme
         $sql = "UPDATE informe SET NumAfiliado='NumAfiliado',NumColegiado='NumColegiado',Motivo='$Motivo',Reacciones='$Reacciones', Rx='$Rx',Diagnostico='$Diagnostico',Tratamiento='$Tratamiento' WHERE 1";
         $con->query($sql);
     }
+
+    public static function historial($afiliado){
+        $app = App::getSingleton();
+            $con = $app->conexionBd();
+            $sql =sprintf("SELECT * FROM informe WHERE NumAfiliado='$afiliado'");
+            $rs = $con->query($sql) or die ($con->error);
+            
+            if($rs->num_rows > 0){
+                while($lista[] = $rs->fetch_assoc());
+                $rs->free();
+                return($lista);
+            } 
+    }
     
 
 }

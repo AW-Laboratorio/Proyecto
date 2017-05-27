@@ -4,6 +4,7 @@
 namespace estatica\includes\ModelScripts;
 
 use \estatica\includes\DaoScripts\DaoInforme as DI;
+use ArrayObject;
 
 class GestorInformes
 {
@@ -51,6 +52,16 @@ session_start();
     public static function buscaInforme($id){
         $idN = htmlspecialchars(trim(strip_tags($id)));
         return(DI::seleccionaInforme($idN));
+    }
+
+    public static function historial($afiliado){
+        $afiliadoN = htmlspecialchars(trim(strip_tags($afiliado)));
+        $lista = DI::historial($afiliadoN);
+          $array = new ArrayObject();
+          for($i= 0; $i <sizeof($lista)-1 ; $i++){
+             $array->append(new Informe($lista[$i]['idinforme'], $lista[$i]['NumAfiliado'], $lista[$i]['NumColegiado'], $lista[$i]['Motivo'], $lista[$i]['Reacciones'], $lista[$i]['Rx'], $lista[$i]['Diagnostico'], $lista[$i]['Tratamiento']));
+          }
+          return $array;
     }
 
 }

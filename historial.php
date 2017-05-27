@@ -1,6 +1,6 @@
 ﻿<?php
     require_once __DIR__.'/includes/config.php';
-    use \estatica\includes\ModelScripts\GestorPacientes
+    use \estatica\includes\ViewScripts\InformesVista as IV;
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,38 +25,9 @@
 
                     ?>
                         <h1>Historial Clínico <?php echo $paciente; ?></h1>
-                        <table class = "historial">
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Especialidad</th>
-                                <th>Informe</th>
-                            </tr>
-                            <tr>
-                                <td>12/02/2017</td>
-                                <td>Traumatología</td>
-                                <td><a href="verInforme.php?data=<?php echo $afiliado;?>"><img class="informe" src="img/informe.png"></a></td>
-                            </tr>
-                            <tr>
-                                <td>17/01/2017</td>
-                                <td>Otorrinolaringología</td>
-                                <td><a href="verInforme.php"><img class="informe" src="img/informe.png"></a></td>
-                            </tr>
-                            <tr>
-                                <td>12/12/2016</td>
-                                <td>Traumatología</td>
-                                <td><a href="verInforme.php"><img class="informe" src="img/informe.png"></a></td>
-                            </tr>
-                            <tr>
-                                <td>21/11/2016</td>
-                                <td>Médico de Cabecera</td>
-                                <td><a href="verInforme.php"><img class="informe" src="img/informe.png"></a></td>
-                            </tr>
-                            <tr>
-                                <td>15/11/2016</td>
-                                <td>Enfermería</td>
-                                <td><a href="verInforme.php"><img class="informe" src="img/informe.png"></a></td>
-                            </tr>
-                        </table>
+                        <?php
+                            IV::historial($afiliado);
+                        ?>
                     </div>
                 </div>
             </div>

@@ -140,6 +140,8 @@
 			$rs = $con->query($sql) or die ($con->error);
 			return mysql_result($rs);
 		}
+
+		
 	}
 
 ?>
