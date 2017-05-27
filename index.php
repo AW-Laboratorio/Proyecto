@@ -19,12 +19,12 @@
     <div class = "contenedor">
 
         <?php
-include 'comun/cabecera.php';
-/*include('comun/menu.php');*/
-?>
+            include 'comun/cabecera.php';
+            /*include('comun/menu.php');*/
+        ?>
 
         <div class = "cuerpo">
-            <div class = "data-u">
+            
                 
     <!-- #region Jssor Slider Begin -->
     <script src="js/jssor.slider-23.1.6.min.js" type="text/javascript"></script>
@@ -75,28 +75,18 @@ include 'comun/cabecera.php';
                 }
             }
             ScaleSlider();
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
             $Jssor$.$AddEvent(window, "resize", ScaleSlider);
             $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
             /*responsive code end*/
         };
     </script>
-    <div id="jssor_1" style="
-        position:relative;
-        margin:0 auto;
-        top: 20px;
-        left: 0px;
-        width: 600px;
-        height: 300px;
-        overflow: hidden;
-        visibility: hidden;
-        border-radius: 10px;">
+
+    <div id="jssor_1">
 
         <!-- Loading Screen -->
-        <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
+        <div data-u="slides">
             <div>
-                <img data-u="image" src="img/salaQuirofano.png" />
+                <img data-u="image" src="img/pasillo.png" />
             </div>
             <div>
                 <img data-u="image" src="img/quirofano.png" />
@@ -108,14 +98,14 @@ include 'comun/cabecera.php';
                 <img data-u="image" src="img/salaespera.png" />
             </div>
             <div>
-                <img data-u="image" src="img/pasillo.png" />
-            </div>
+                <img data-u="image" src="img/salaQuirofano.png" />
             </div>
         </div>
     </div>
+
     <script type="text/javascript">jssor_1_slider_init();</script>
     <!-- #endregion Jssor Slider End -->
-    </div>
+    
 
                 <?php
 
