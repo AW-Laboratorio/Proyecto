@@ -288,5 +288,61 @@ EOS;
             }
        
         }
+
+        public static function informesPaciente($dni){
+            
+            //Datos paciente
+            $paciente = GP::getPaciente($dni);
+            $nombre = $paciente->getNombre();
+            $apellidos = $paciente->getApellidos(); 
+            $afiliado = $paciente->getNumSS();
+                        
+            //Datos informe
+            $lista = GI::historial($afiliado); //$this->ListaForo->getListaForo();
+            $iterator = $lista->getIterator();
+            
+            while($iterator->valid()){
+                //Datos informe
+                $numC = $iterator->current()->getNumColegiado();
+                $motivo = $iterator->current()->getMotivo();
+                $reacciones=$iterator->current()->getReacciones();
+                $rx=$iterator->current()->getRx();
+                $diagnostico=$iterator->current()->getDiagnostico();
+                $tratamiento=$iterator->current()->getTratamiento();
+                //Datos del medico
+                $medico=GM::buscaMedico($numC);
+                $nombreM=$medico->getNombre();
+                $apellidosM=$medico->getApellidos();
+                $html = <<<EOS
+                
+                <div class = "cajaCita">
+                    <div class= "datos">
+                        <div><h4>Motivo de la consulta</h4></div>
+                        <div><p>$motivo</p></div>
+                    </div>
+                    <div class= "datos">
+                        <div><h4>Diagnóstico</h4></div>
+                        <div><p>$diagnostico</p></div>
+                    </div>
+                    <div class= "datos">
+                        <div><h4>Tratamiento</h4></div>
+                        <div><p>$tratamiento</p></div>
+                    </div>
+                    <div class= "datos">
+                        <h4>Médico Responsable: </h4>
+                        <p>$nombreM $apellidosM</p>
+                    </div>
+                    <p></p>
+                    <a href="verInformeP.php"><button class = "cambio">Ver</button></a>
+                    <button class = "anular">Descargar</button></a>
+                </div>
+
+                
+EOS;
+            echo $html;
+            $iterator->next();   
+            }
+       
+        }
 }
 ?>
