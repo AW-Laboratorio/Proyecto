@@ -200,14 +200,6 @@ p.usuario{
     color:#24699C;
 }
 
-.noticiasBanner{
-    height: 400px;
-    width: 900px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
 .data-u ul{
     display: flex;
     padding: 0;
@@ -1178,4 +1170,17 @@ div[data-u='slides']{
     width:600px;
     height:300px;
     overflow:hidden;
+}
+
+.imagenesAdmin{
+    height: 400px;
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.imagenesAdmin ul {
+   display: inline-block;
 }
