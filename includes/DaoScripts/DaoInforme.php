@@ -12,46 +12,46 @@ class DaoInforme
 
     private $array;
 
-    public function seleccionaInforme($idinforme)
+    public static function seleccionaInforme($idInforme)
     {
         $app = App::getSingleton();
         $con = $app->conexionBd();
-        $sql = sprintf("SELECT * FROM informe WHERE idinforme='$idinforme'");
+        $sql = sprintf("SELECT * FROM informe WHERE idinforme='$idInforme'");
         $rs  = $con->query($sql) or die($con->error);
 
         if ($rs->num_rows == 1) {
             $fila    = $rs->fetch_assoc();
-            $informe = new Informe($fila['idinforme'], $fila['Motivo'], $fila['Reacciones'], $fila['$Rx'], $fila['$Diagnostico'], $fila['$Tratamiento']);
+            $informe = new Informe($fila['idinforme'], $fila['NumAfiliado'], $fila['NumColegiado'], $fila['Motivo'], $fila['Reacciones'], $fila['Rx'], $fila['Diagnostico'], $fila['Tratamiento']);
             $rs->free();
             return $informe;
         }
         return false;
     }
 
-    public function insertaInforme($Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento)
+    public function insertaInforme($NumAfiliado, $NumColegiado, $Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento)
     {
         $app = App::getSingleton();
         $con = $app->conexionBd();
-        $sql = "INSERT INTO informe (Motivo, Reacciones,Rx, Diagnostico, Tratamiento) VALUES ( '$Motivo', '$Reacciones', '$Rx', '$Diagnostico', '$Tratamiento')";
-        //echo " guardado en la base de datos";
+        $sql = "INSERT INTO informe (NumAfiliado,NumColegiado,Motivo, Reacciones,Rx, Diagnostico, Tratamiento) VALUES ( '$NumAfiliado','$NumColegiado','$Motivo', '$Reacciones', '$Rx', '$Diagnostico', '$Tratamiento')";
         $rs = $con->query($sql) or die($con->error);
 
     }
 
-    public function eliminaInforme($idinforme)
+    public function eliminaInforme($idInforme)
     {
         $app = App::getSingleton();
         $con = $app->conexionBd();
-        $sql = "DELETE FROM informe WHERE idinforme = '$idinforme'";
+        $sql = "DELETE FROM informe WHERE idInforme = '$idInforme'";
         $con->query($sql) or die($con->error);
     }
 
-    public function modificaInforme($idinforme, $Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento)
+    public function modificaInforme($NumAfiliado, $NumColegiado,  $Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento)
     {
         $app = App::getSingleton();
         $con = $app->conexionBd();
-        $sql = "UPDATE informe SET Motivo='$Motivo',Reacciones='$Reacciones', Rx='$Rx',Diagnostico='$Diagnostico',Tratamiento='$Tratamiento' WHERE idinforme='$idinforme'";
+        $sql = "UPDATE informe SET NumAfiliado='NumAfiliado',NumColegiado='NumColegiado',Motivo='$Motivo',Reacciones='$Reacciones', Rx='$Rx',Diagnostico='$Diagnostico',Tratamiento='$Tratamiento' WHERE 1";
         $con->query($sql);
     }
+    
 
 }

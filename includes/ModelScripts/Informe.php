@@ -5,20 +5,25 @@ class Informe
 {
 
     private $idInforme;
+    private $NumAfiliado;
+    private $NumColegiado;
     private $Motivo;
     private $Reacciones;
     private $Rx;
     private $Diagnostico;
     private $Tratamiento;
 
-    public function __construct($idInforme, $Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento)
+    public function __construct($idInforme, $NumAfiliado, $NumColegiado, $Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento)
     {
-        $this->idInforme   = $idInforme;
-        $this->Motivo      = $Motivo;
-        $this->Reacciones  = $Reacciones;
-        $this->Rx          = $Rx;
-        $this->Diagnostico = $Diagnostico;
-        $this->Tratamiento = $Tratamiento;
+
+        $this->idInforme    = $idInforme;
+        $this->NumAfiliado  = $NumAfiliado;
+        $this->NumColegiado = $NumColegiado;
+        $this->Motivo       = $Motivo;
+        $this->Reacciones   = $Reacciones;
+        $this->Rx           = $Rx;
+        $this->Diagnostico  = $Diagnostico;
+        $this->Tratamiento  = $Tratamiento;
     }
 
     /**
@@ -41,6 +46,54 @@ class Informe
     private function _setIdInforme($idInforme)
     {
         $this->idInforme = $idInforme;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of NumAfiliado.
+     *
+     * @return mixed
+     */
+    public function getNumAfiliado()
+    {
+        return $this->NumAfiliado;
+    }
+
+    /**
+     * Sets the value of NumAfiliado.
+     *
+     * @param mixed $NumAfiliado the num afiliado
+     *
+     * @return self
+     */
+    private function _setNumAfiliado($NumAfiliado)
+    {
+        $this->NumAfiliado = $NumAfiliado;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of NumColegiado.
+     *
+     * @return mixed
+     */
+    public function getNumColegiado()
+    {
+        return $this->NumColegiado;
+    }
+
+    /**
+     * Sets the value of NumColegiado.
+     *
+     * @param mixed $NumColegiado the num colegiado
+     *
+     * @return self
+     */
+    private function _setNumColegiado($NumColegiado)
+    {
+        $this->NumColegiado = $NumColegiado;
 
         return $this;
     }

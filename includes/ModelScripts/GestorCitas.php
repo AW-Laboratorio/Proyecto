@@ -40,8 +40,7 @@
 		}
 
 		public static function insertarCita($numAfiliado, $numColegiado, $fecha, $hora){
-          	$Id = htmlspecialchars(trim(strip_tags($id)));
-	      	$NumAfiliado = htmlspecialchars(trim(strip_tags($numAfiliado)));
+          	$NumAfiliado = htmlspecialchars(trim(strip_tags($numAfiliado)));
 	      	$NumColegiado = htmlspecialchars(trim(strip_tags($numColegiado)));
 	        $Fecha = htmlspecialchars(trim(strip_tags($fecha)));
 			$Hora = htmlspecialchars(trim(strip_tags($hora)));

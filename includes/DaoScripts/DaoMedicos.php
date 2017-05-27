@@ -103,7 +103,7 @@
 			return false;
 		}
 
-		public static function buscaMedicoPorEspecialidad($esp){
+		/*public static function buscaMedicoPorEspecialidad($esp){
 			$app = App::getSingleton();
             $con = $app->conexionBd();
 			$sql =sprintf("SELECT * FROM medicos WHERE Especialidad ='$esp'");
@@ -116,6 +116,29 @@
 				return $medico;
 			}
 			return false;
+		}*/
+
+		public static function buscaMedicoPorEspecialidad($esp){
+			$app = App::getSingleton();
+            $con = $app->conexionBd();
+			$sql =sprintf("SELECT * FROM medicos WHERE Especialidad='$esp'");
+      		$rs = $con->query($sql) or die ($con->error);
+
+			if($rs->num_rows == 1){
+				$fila = $rs->fetch_assoc();
+				$paciente = $fila['NumColegiado'];
+				$rs->free();
+				return $paciente;
+			}
+			return false;
+		}
+
+		public static function listaEspecialidades(){
+			$app = App::getSingleton();
+			$con = $app->conexionBd();
+			$sql = sprintf("SELECT Especialidad FROM medicos");
+			$rs = $con->query($sql) or die ($con->error);
+			return mysql_result($rs);
 		}
 	}
 

@@ -48,4 +48,9 @@ session_start();
         return ($this->dao->modificaInforme($Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento));
     }
 
+    public static function buscaInforme($id){
+        $idN = htmlspecialchars(trim(strip_tags($id)));
+        return(DI::seleccionaInforme($idN));
+    }
+
 }

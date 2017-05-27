@@ -1,5 +1,6 @@
 ﻿<?php
     require_once __DIR__.'/includes/config.php';
+    use \estatica\includes\ModelScripts\GestorPacientes
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,12 @@
                 <?php include('comun/menuMedico.php');?>
                 <div class="contenidopestanas">
                     <div class="histotial">
-                        <h1>Historial Clínico Luisa Fernández Olivares</h1>
+                    <?php
+                        $paciente= $_REQUEST['data'];
+                        $afiliado = $_REQUEST['num'];
+
+                    ?>
+                        <h1>Historial Clínico <?php echo $paciente; ?></h1>
                         <table class = "historial">
                             <tr>
                                 <th>Fecha</th>
@@ -28,7 +34,7 @@
                             <tr>
                                 <td>12/02/2017</td>
                                 <td>Traumatología</td>
-                                <td><a href="verInforme.php"><img class="informe" src="img/informe.png"></a></td>
+                                <td><a href="verInforme.php?data=<?php echo $afiliado;?>"><img class="informe" src="img/informe.png"></a></td>
                             </tr>
                             <tr>
                                 <td>17/01/2017</td>
