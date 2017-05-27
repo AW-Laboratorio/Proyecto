@@ -16,19 +16,25 @@
 		<div class = "cuerpo">
 			<div class = "foro">
 				<h1>Escribe tu comentario</h1>
-				<div class="cajaCont">
-					<div>
-						<label>Nombre a mostrar: </label>
-				    	<input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre"/>
+				<form action="includes/Formularios/formInsertaMensaje.php" method="post">
+					<div class="cajaCont">
+						<div>
+							<label>Nombre a mostrar: </label>
+					    	<input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre"/>
+					    	<p>* Si no escribe un nombre se publicará como Anónimo</p>
+						</div>
+						<div>
+							<label>Comentario: </label>
+					    	<textarea name="msj" id="msj" placeholder="Escribe tu comentario aqui.." required></textarea>
+						</div>
 					</div>
-					<div>
-						<label>Comentario: </label>
-				    	<textarea name="msj" id="msj" placeholder="Escribe tu comentario aqui.."></textarea>
+					<div class="boton_enviar">
+						<?php $idforo = $_REQUEST['data']; $tema=$_REQUEST['tema'];?>
+						<input type="text" id="foro" name="foro" value="<?php echo $idforo;?>" hidden/>
+						<input type="text" id="tema" name="tema" value="<?php echo $tema;?>" hidden/>
+						<button type= "submit" class = "add">Añadir comentario</button>
 					</div>
-				</div>
-				<div class="boton_enviar">
-					<a href="MensajesForo.php"><button class = "add">Añadir comentario</button></a>
-				</div>
+				</form>
 			</div>
 		</div>
 

@@ -26,10 +26,10 @@
             return false;
         }
         
-        public static function insertamensajesforo($Usuario, $Mensaje, $Fecha){
+        public static function insertamensajesforo($idForo, $Usuario, $Mensaje){
             $app = App::getSingleton();
             $con = $app->conexionBd();
-            $sql = "INSERT INTO mensajesforo (Usuario, Mensaje, Fecha) VALUES ('$Usuario', '$Mensaje', '$Fecha')");
+            $sql = "INSERT INTO mensajesforo (IdForo, Usuario, Mensaje) VALUES ('$idForo', '$Usuario', '$Mensaje')";
             $rs = $con->query($sql) or die ($con->error);
         }
         
@@ -40,7 +40,7 @@
             $con->query($sql) or die ($con->error);
         }
         
-        public static function existemensajesforo(IdInforme){
+        public static function existemensajesforo($IdInforme){
             $app = App::getSingleton();
             $con = $app->conexionBd();
             $numCol=0;
@@ -87,6 +87,19 @@
 				return $mensajesforo;
 			}
             return false;
+        }
+
+        public static function listaMensajesForo($idForo){
+            $app = App::getSingleton();
+            $con = $app->conexionBd();
+            $sql =sprintf("SELECT * FROM mensajesforo WHERE IdForo = '$idForo'");
+            $rs = $con->query($sql) or die ($con->error);
+            
+            if($rs->num_rows > 0){
+                while($lista[] = $rs->fetch_assoc());
+                $rs->free();
+                return($lista);
+            } 
         }
     }
 ?>

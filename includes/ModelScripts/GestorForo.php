@@ -29,17 +29,17 @@
           DF::insertaForo(/*$IdForo,*/ $Nombre, $Tema, $UltParticipante, $Creador);
         }
 
-        public static function modificaTema($Tema, $IdForo){
-          $Tem = htmlspecialchars(trim(strip_tags($Tema)));
-          $ID = htmlspecialchars(trim(strip_tags($IdForo)));
-      return (DF::modificaDireccion($Tema, $IdForo));
-        }
 
         public static function borrarForo($Tema){
             $Tema = htmlspecialchars(trim(strip_tags($Tema)));
             
             DF::borraForo($Tema);
         }
+        
+        public static function existeForo($IdForo){
+      $IdForo = htmlspecialchars(trim(strip_tags($IdForo)));
+      return (DP::existeForo($IdForo));
+    }
         
         public static function getListaForo(){
             $lista = DF::listaForo();
@@ -50,9 +50,16 @@
             return $array;
         }
         
+        public static function buscaForo($IdForo){
+            $IdForo = htmlspecialchars(trim(strip_tags($IdForo)));
+            return (DF::buscarForo($IdForo));
+        }
+     
         public static function getUltimoForo(){
            return (DF::cogeUltimoForo());
         }
+        
+        
 
   }
 

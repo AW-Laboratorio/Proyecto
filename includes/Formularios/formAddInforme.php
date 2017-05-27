@@ -12,3 +12,4 @@ $Tratamiento = $_POST['Tratamiento'];
 $Informe = GI::insertarInforme($Motivo, $Reacciones, $Rx, $Diagnostico, $Tratamiento);
 
 header("Location: ../../agendaMedico.php");
+?>
