@@ -117,6 +117,19 @@
 			}
 			return false;
 		}
+
+		public static function listaMedico(){
+			$app = App::getSingleton();
+			$con = $app->conexionBd();
+			$sql =sprintf("SELECT * FROM medicos ORDER BY Nombre DESC");
+      		$rs = $con->query($sql) or die ($con->error);
+      		
+			if($rs->num_rows > 0){
+				while($lista[] = $rs->fetch_assoc());
+				$rs->free();
+				return($lista);
+			} 
+		}
 	}
 
 ?>

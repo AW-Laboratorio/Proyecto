@@ -48,7 +48,35 @@
 EOS;
 			echo $html;
 		}
-		
+
+	public static function listaMedicos(){
+            $lista = GM::getListaMedico();
+            $iterator = $lista->getIterator();
+
+            while($iterator->valid()){
+
+			$id = $iterator->current()->getIdMedico();
+			$nombre = $iterator->current()->getNombre();
+			$apellidos = $iterator->current()->getApellidos();
+			$numCol = $iterator->current()->getNumCol();
+			$html = <<<EOS
+
+				<div class = "alinearContenido">
+					<div class = "datosP1">
+					<h1>Médico/a</h1>
+						<form action="includes/Formularios/formModificaDatosM.php" method="post">
+							<div class="datos">Nombre: $nombre</div>
+							<div class="datos">Apellidos: $apellidos</div>
+							<div class="datos">Número colegiado: $numCol</div>		
+						</form>
+					</div>
+				</div>
+EOS;
+			echo $html;
+			$iterator->next();
+		}
+
+		}
 	}
 
 ?>

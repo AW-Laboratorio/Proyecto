@@ -1172,15 +1172,3 @@ div[data-u='slides']{
     overflow:hidden;
 }
 
-.imagenesAdmin{
-    height: 400px;
-    width: 900px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-.imagenesAdmin ul {
-   display: inline-block;
-}

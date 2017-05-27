@@ -23,22 +23,22 @@
 		<div class = "cuerpo">
 
 			<div class="contenidoAdmin">
-						<div class = "adminFotos">
-							<a href="adminMedicos.php"><img src="img/medicoAdmin.jpg"></a><p>Médico</p>
-						</div>
+				<div class = "adminFotos">
+					<a href="adminMedicos.php"><img src="img/medicoAdmin.jpg"></a><p>Médico</p>
+				</div>
 
-						<div class = "adminFotos">
-							<a href="adminPacientes.php"><img src="img/pacienteAdmin.jpg"></a><p>Paciente</p>
-						</div>
-						<div class = "adminFotos">
-							<a href="adminCitas.php"><img src="img/calendarAdmin.jpg"></a><p>Citas</p>
-						</div>
-						<div class = "adminFotos">
-							<a href="adminInformes.php"><img src="img/informeAdmin.jpg"></a><p>Informes</p>
-						</div>
-						<div class = "adminFotos">
-							<a href="adminForo.php"><img src="img/foroAdmin.jpg"></a><p>Foro</p>
-						</div>
+				<div class = "adminFotos">
+					<a href="adminPacientes.php"><img src="img/pacienteAdmin.jpg"></a><p>Paciente</p>
+				</div>
+				<div class = "adminFotos">
+					<a href="adminCitas.php"><img src="img/calendarAdmin.jpg"></a><p>Citas</p>
+				</div>
+				<div class = "adminFotos">
+					<a href="adminInformes.php"><img src="img/informeAdmin.jpg"></a><p>Informes</p>
+				</div>
+				<div class = "adminFotos">
+					<a href="adminForo.php"><img src="img/foroAdmin.jpg"></a><p>Foro</p>
+				</div>
 			</div>
 		</div>
 	

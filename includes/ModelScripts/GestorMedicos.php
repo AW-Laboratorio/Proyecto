@@ -3,6 +3,7 @@
 	/*require_once '/../DaoScripts/DaoMedicos.php';*/
 	namespace estatica\includes\ModelScripts;
 	use \estatica\includes\DaoScripts\DaoMedicos as DM;
+	use ArrayObject;
 	
 	class GestorMedicos{
 
@@ -39,6 +40,17 @@
 	  	  	}
 	      	return $array;
 		}
+
+
+      	public static function getListaMedico(){
+      	  $lista = DM::listaMedico();
+	      $array = new ArrayObject();
+	     	for($i= 0; $i <sizeof($lista)-1 ; $i++){
+	     	 	$array->append(new Medico($lista[$i]['IdMedico'], $lista[$i]['NumColegiado'],$lista[$i]['Nombre'], $lista[$i]['Apellidos'], $lista[$i]['DNI'], $lista[$i]['Consulta'], $lista[$i]['Telefono'], $lista[$i]['Correo'], $lista[$i]['Especialidad']));
+	  	  	}
+	      return $array;
+
+      	}
 	}
 
 ?>
