@@ -191,6 +191,18 @@ img.calendar{
 .cajaInforme .datos h4{
     font-size: 22px;
 }
+.botoninforme{
+    display: inline-block;
+    background-color:#599bb3;
+    border-radius:8px;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 10px;
+    margin-left: 35%;
+    margin-top: 2%;
+}
 /*--------- CITAS PACIENTE -----------------*/
 .cajaCita{
     border: 2px solid CornflowerBlue;

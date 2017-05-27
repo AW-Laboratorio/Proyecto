@@ -144,7 +144,7 @@ EOS;
                         <input type="text" id="diag" name="diag" value="$diagnostico" hidden>
                         <input type="text" id="trat" name="trat" value="$tratamiento" hidden>
                         <input type="text" id="idinf" name="idinf" value="$idInforme" hidden>
-                        <button class="boton_enviar" type="submit">Modificar Informe</button>
+                        <button class="botoninforme" type="submit">Modificar Informe</button>
                     </form>
 EOS;
             echo $html;
