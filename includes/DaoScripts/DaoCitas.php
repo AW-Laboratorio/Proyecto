@@ -28,7 +28,9 @@
 		public static function listaCitasPaciente($numAfiliado){
 			$app = App::getSingleton();
 			$con = $app->conexionBd();
-			$sql =sprintf("SELECT * FROM citas WHERE NumAfiliado= '$numAfiliado' ORDER BY fecha ASC");
+			$hoy=date("Y-m-d");
+
+			$sql =sprintf("SELECT * FROM citas WHERE NumAfiliado= '$numAfiliado' AND fecha > '$hoy' ORDER BY fecha ASC, hora ASC");
 			$rs = $con->query($sql) or die ($con->error);
       		
 			if($rs->num_rows > 0){
@@ -52,10 +54,10 @@
 			} 
 		}
 
-		public static function insertaCita($numAfilado, $numColegiado, $fecha){
+		public static function insertaCita($numAfiliado, $numColegiado, $fecha, $hora){
 			$app = App::getSingleton();
 			$con = $app->conexionBd();
-			$sql = "INSERT INTO pacientes (NumAfiliado, NumColegiado, Fecha) VALUES ('$numAfiliado', '$numColegiado', '$fecha')";
+			$sql = "INSERT INTO citas (NumAfiliado, NumColegiado, Fecha, Hora) VALUES ('$numAfiliado', '$numColegiado', '$fecha', '$hora')";
 			$rs = $con->query($sql) or die ($con->error);
 		}
 

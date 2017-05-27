@@ -33,13 +33,14 @@ namespace estatica\includes\ViewScripts;
 				$pacienteApellidos = GP::buscaPaciente($numAfiliado)->getApellidos();//$paciente->buscaPaciente($numAfiliado)->getApellidos();
 				$fecha = $iterator->current()->getFecha();
             	$hora = $iterator->current()->getHora();
+            	$paciente = $pacienteNombre . ' '. $pacienteApellidos;
             	$html = <<<EOS
 	
 				<tr>
 					<td>$hora</th>
 					<td>$pacienteNombre $pacienteApellidos
-					<td><a href="historial.php">$numAfiliado</a></td>
-	                <td><a href="informe.php"><img class="informe" src="img/informe.png"></a></td>
+					<td><a href="historial.php?data=$paciente&num=$numAfiliado">$numAfiliado</a></td>
+	                <td><a href="informe.php?data=$numAfiliado"><img class="informe" src="img/informe.png"></a></td>
 				</tr>
 
 EOS;
@@ -49,11 +50,7 @@ EOS;
 		}
 
 		public static function listaCitaPaciente($dni){
-			/*require_once '/../ModelScripts/GestorMedicos.php';
-			require_once '/../ModelScripts/GestorPacientes.php';*/
-			//$medico = GM::GestorMedicos(); //new GestorMedicos();
-			//$paciente = GP::GestorPacientes(); //new GestorPacientes();
-
+			
 			$numAfiliado = GP::buscaNumAfiliado($dni); //$paciente->buscaNumAfiliado($dni);
 			$lista = GC::getListaCitaPaciente($numAfiliado); //$this->ListaCitas->getListaCitaPaciente($numAfiliado);
             $iterator = $lista->getIterator();
@@ -71,12 +68,13 @@ EOS;
                 <div class="cajaCita">
                     <p>Doctor/a $medicoNombre $medicoApellidos</p>
 		    		<p>$fecha a las $hora</p>
-		    		<a href="pedirCita.php"><button class = "cambio">Cambiar</button></a>
+		    		<a href="includes/Formularios/formCambiaCita.php?data=$id"><button class = "cambio">Cambiar</button></a>
                     <a href="includes/Formularios/formEliminarCita.php?id=$id"><button class = "anular">Anular</button></a>
                 </div>				
 EOS;
 				echo $html;
 				$iterator->next();
-			}		} 
+			}		
+		} 
 	}
 ?>

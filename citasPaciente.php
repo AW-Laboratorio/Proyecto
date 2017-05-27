@@ -19,15 +19,15 @@
              
             <div class="cuerpo">
                 <?php include('comun/menuPaciente.php'); ?>
-                <div class="contenidopestanas">			
-        		   <div class="citas">
+                <div class="contenidopestanas">         
+                   <div class="citas">
                         <h1>Próximas citas</h1>
                         <?php
                         
-                			$app = App::getSingleton();
+                            $app = App::getSingleton();
                             $dni= $_SESSION['DNI'];
-                			//$vista = new CitasVista();
-                			//$vista->listaCitaPaciente($dni);
+                            //$vista = new CitasVista();
+                            //$vista->listaCitaPaciente($dni);
                             CV::listaCitaPaciente($dni);
                         ?>
                     </div>

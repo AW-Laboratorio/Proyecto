@@ -1,25 +1,28 @@
 <?php
+	
 	namespace estatica\includes\ModelScripts;
 	
-	class MensajesForo{
+	class Mensaje{
 		
-		private $IdInforme;
+		private $IdMensaje;
+		private $IdForo;		
 		private $Usuario;
 		private $Mensaje;
-        private $Fecha;
-		
+		private $Fecha;
 
-		function __construct($IdInforme, $Usuario, $Mensaje, $Fecha){
-			
-			$this->IdInforme=$IdInforme;
-			$this->Usuario=$Usuario;
-			$this->Mensaje=$Mensaje;
-			$this->Fecha=$Fecha;		
-
+		function __construct($idmensaje, $idforo, $usuario, $mensaje, $fecha){
+			$this->IdMensaje=$idmensaje;
+			$this->IdForo = $idforo;
+			$this->Usuario = $usuario;
+			$this->Mensaje = $mensaje;
+			$this->Fecha = $fecha;
 		}
 
-		public function getIdIforme(){
-			return $this->IdInforme;
+		public function getIdForo(){
+			return $this->IdForo;
+		}
+		public function getIdMensaje(){
+			return $this->IdMensaje;
 		}
 		public function getUsuario(){
 			return $this->Usuario;
