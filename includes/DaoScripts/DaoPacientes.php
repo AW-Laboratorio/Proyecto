@@ -162,6 +162,19 @@
 			$rs->num_rows;
 			return $numCol;
 		}
+
+		public static function listaPaciente(){
+			$app = App::getSingleton();
+			$con = $app->conexionBd();
+			$sql =sprintf("SELECT * FROM pacientes ORDER BY Nombre DESC");
+      		$rs = $con->query($sql) or die ($con->error);
+      		
+			if($rs->num_rows > 0){
+				while($lista[] = $rs->fetch_assoc());
+				$rs->free();
+				return($lista);
+			} 
+		}
 	}
 
 ?>

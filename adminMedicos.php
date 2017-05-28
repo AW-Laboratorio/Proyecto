@@ -28,8 +28,8 @@
 
                   MV::listaMedicos();
                 ?>
-                <a href="modifMedicos.php"><input type="button" value="Modificar" class="boton_pedirCita";"/>
-                <input type="button" value="Eliminar" class="boton_pedirCita";"/>
+                <a href="modifMedicos.php"><input type="button" value="Modificar" class="boton_modificar";"/>
+                <input type="button" value="Eliminar" class="boton_eliminar";"/>
           </div>
           
   		</div>
