@@ -57,6 +57,10 @@ class DaoInforme
             $app = App::getSingleton();
             $con = $app->conexionBd();
             $sql =sprintf("SELECT * FROM informes ORDER BY Nombre DESC");
+    public static function historial($afiliado){
+        $app = App::getSingleton();
+            $con = $app->conexionBd();
+            $sql =sprintf("SELECT * FROM informe WHERE NumAfiliado='$afiliado'");
             $rs = $con->query($sql) or die ($con->error);
             
             if($rs->num_rows > 0){
@@ -65,6 +69,7 @@ class DaoInforme
                 return($lista);
             } 
         }
+    }
     
 
 }

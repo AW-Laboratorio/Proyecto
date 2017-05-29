@@ -144,10 +144,10 @@ EOS;
                         <input type="text" id="diag" name="diag" value="$diagnostico" hidden>
                         <input type="text" id="trat" name="trat" value="$tratamiento" hidden>
                         <input type="text" id="idinf" name="idinf" value="$idInforme" hidden>
-                        <button class="boton_enviar" type="submit">Modificar Informe</button>
+                        <button class="botoninforme" type="submit">Modificar Informe</button>
                     </form>
 EOS;
-    echo $html;
+            echo $html;
         }
 
         public static function listaInformes(){
@@ -178,6 +178,33 @@ EOS;
             $html = <<<EOS
 
                 <div class="datosPaciente">
+
+        public static function verInformePaciente($afiliado, $idInforme){
+            //Datos del paciente
+            $paciente = GP::buscaPaciente($afiliado);
+            $nombre = $paciente->getNombre();
+            $apellidos = $paciente->getApellidos();
+            $nif=$paciente->getDni();
+            $fechaN=$paciente->getFechaN();
+            $sexo=$paciente->getSexo();
+            $telefono = $paciente->getTfno();
+            $dir = $paciente->getDir();
+            //Datos del informe
+            $informe = GI::buscaInforme($idInforme);
+            $numC = $informe->getNumColegiado();
+            $motivo = $informe->getMotivo();
+            $reacciones=$informe->getReacciones();
+            $rx=$informe->getRx();
+            $diagnostico=$informe->getDiagnostico();
+            $tratamiento=$informe->getTratamiento();
+            //Datos del medico
+            $medico=GM::buscaMedico($numC);
+            $nombreM=$medico->getNombre();
+            $apellidosM=$medico->getApellidos();
+
+            $html = <<<EOS
+
+                    <div class="datosPaciente">
                         <h3>Datos Paciente</h3>
                         <div class="datos">
                             <h4>N.H.C: </h4><p>$afiliado</p>
@@ -255,4 +282,116 @@ EOS;
 
         
     }
+
+EOS;
+            echo $html;
+        }
+
+        public static function historial($afiliado){
+            $lista = GI::historial($afiliado); //$this->ListaForo->getListaForo();
+            //Datos paciente
+            $paciente = GP::buscaPaciente($afiliado);
+            $nombre = $paciente->getNombre();
+            $apellidos = $paciente->getApellidos(); 
+            //Datos informe
+            $iterator = $lista->getIterator();
+            
+            while($iterator->valid()){
+                //Datos informe
+                $numC = $iterator->current()->getNumColegiado();
+                $motivo = $iterator->current()->getMotivo();
+                $reacciones=$iterator->current()->getReacciones();
+                $rx=$iterator->current()->getRx();
+                $diagnostico=$iterator->current()->getDiagnostico();
+                $tratamiento=$iterator->current()->getTratamiento();
+                //Datos del medico
+                $medico=GM::buscaMedico($numC);
+                $nombreM=$medico->getNombre();
+                $apellidosM=$medico->getApellidos();
+                $html = <<<EOS
+                
+                <div class="cajaInforme">
+                    <div class= "datos">
+                        <div><h4>Motivo de la consulta</h4></div>
+                        <div><p>$motivo</p></div>
+                    </div>
+                    <div class= "datos">
+                        <div><h4>Diagnóstico</h4></div>
+                        <div><p>$diagnostico</p></div>
+                    </div>
+                    <div class= "datos">
+                        <div><h4>Tratamiento</h4></div>
+                        <div><p>$tratamiento</p></div>
+                    </div>
+                    <div class= "datos">
+                        <h4>Médico Responsable: </h4>
+                        <p>$nombreM $apellidosM</p>
+                    </div>
+                    <div class="links">
+                        <a href="verInforme.php?data=$afiliado"><button>Ver Informe Completo</button></a>
+                    </div>
+                </div>
+EOS;
+            echo $html;
+            $iterator->next();   
+            }
+       
+        }
+
+        public static function informesPaciente($dni){
+            
+            //Datos paciente
+            $paciente = GP::getPaciente($dni);
+            $nombre = $paciente->getNombre();
+            $apellidos = $paciente->getApellidos(); 
+            $afiliado = $paciente->getNumSS();
+                        
+            //Datos informe
+            $lista = GI::historial($afiliado); //$this->ListaForo->getListaForo();
+            $iterator = $lista->getIterator();
+            
+            while($iterator->valid()){
+                //Datos informe
+                $numC = $iterator->current()->getNumColegiado();
+                $motivo = $iterator->current()->getMotivo();
+                $reacciones=$iterator->current()->getReacciones();
+                $rx=$iterator->current()->getRx();
+                $diagnostico=$iterator->current()->getDiagnostico();
+                $tratamiento=$iterator->current()->getTratamiento();
+                //Datos del medico
+                $medico=GM::buscaMedico($numC);
+                $nombreM=$medico->getNombre();
+                $apellidosM=$medico->getApellidos();
+                $html = <<<EOS
+                
+                <div class = "cajaCita">
+                    <div class= "datos">
+                        <div><h4>Motivo de la consulta</h4></div>
+                        <div><p>$motivo</p></div>
+                    </div>
+                    <div class= "datos">
+                        <div><h4>Diagnóstico</h4></div>
+                        <div><p>$diagnostico</p></div>
+                    </div>
+                    <div class= "datos">
+                        <div><h4>Tratamiento</h4></div>
+                        <div><p>$tratamiento</p></div>
+                    </div>
+                    <div class= "datos">
+                        <h4>Médico Responsable: </h4>
+                        <p>$nombreM $apellidosM</p>
+                    </div>
+                    <p></p>
+                    <a href="verInformeP.php"><button class = "cambio">Ver</button></a>
+                    <button class = "anular">Descargar</button></a>
+                </div>
+
+                
+EOS;
+            echo $html;
+            $iterator->next();   
+            }
+       
+        }
+}
 ?>

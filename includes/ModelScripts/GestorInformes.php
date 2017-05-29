@@ -53,7 +53,6 @@ session_start();
         $idN = htmlspecialchars(trim(strip_tags($id)));
         return(DI::seleccionaInforme($idN));
     }
-
     public static function getListaInforme(){
           $lista = DI::listaInforme();
           $array = new ArrayObject();
@@ -63,5 +62,14 @@ session_start();
           return $array;
 
         }
+    public static function historial($afiliado){
+        $afiliadoN = htmlspecialchars(trim(strip_tags($afiliado)));
+        $lista = DI::historial($afiliadoN);
+          $array = new ArrayObject();
+          for($i= 0; $i <sizeof($lista)-1 ; $i++){
+             $array->append(new Informe($lista[$i]['idinforme'], $lista[$i]['NumAfiliado'], $lista[$i]['NumColegiado'], $lista[$i]['Motivo'], $lista[$i]['Reacciones'], $lista[$i]['Rx'], $lista[$i]['Diagnostico'], $lista[$i]['Tratamiento']));
+          }
+          return $array;
+    }
 
 }

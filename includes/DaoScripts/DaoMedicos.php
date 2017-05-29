@@ -141,6 +141,7 @@
 			return mysql_result($rs);
 		}
 
+
 		public static function listaMedico(){
 			$app = App::getSingleton();
 			$con = $app->conexionBd();
@@ -153,6 +154,7 @@
 				return($lista);
 			} 
 		}
+
 	}
 
 ?>

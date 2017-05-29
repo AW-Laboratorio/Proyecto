@@ -1,5 +1,6 @@
 ﻿<?php
     require_once __DIR__.'/includes/config.php';
+    use \estatica\includes\ViewScripts\InformesVista as IV;
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,34 +20,10 @@
                 <div class="contenidopestanas">
                     <div class="citas">
                         <h1>Informes</h1>
-                        <div class = "cajaCita">
-                            <h3>RX Brazo Derecho</h3>
-                            <p>Doctor Jaime Pérez</p>
-                            <p>06/03/2016</p>
-                            <a href="verInformeP.php"><button class = "cambio">Ver</button></a>
-                            <button class = "anular">Descargar</button></a>
-                        </div>
-                        <div class = "cajaCita">
-                            <h3>Informe Otorrino</h3>
-                            <p>Doctora Alicia Sánchez</p>
-                            <p>12/03/2016</p>
-                            <a href="verInformeP.php"><button class = "cambio">Ver</button></a>
-                            <button class = "anular">Descargar</button>
-                        </div>
-                        <div class = "cajaCita">
-                            <h3>Revisión Dermatología</h3>
-                            <p>Doctor Héctor Gómez</p>
-                            <p>17/03/2016</p>
-                            <a href="verInformeP.php"><button class = "cambio">Ver</button></a>
-                            <button class = "anular">Descargar</button>
-                        </div>
-                        <div class = "cajaCita">
-                            <h3>Dermatología</h3>
-                            <p>Doctor Álvaro Moya</p>
-                            <p>17/03/2016</p>
-                            <a href="verInformeP.php"><button class = "cambio">Ver</button></a>
-                            <button class = "anular">Descargar</button>
-                        </div>
+                        <?php
+                            $dni = $_SESSION['DNI'];
+                            IV::informesPaciente($dni);
+                        ?>
                     </div>
                 </div>
             </div>
