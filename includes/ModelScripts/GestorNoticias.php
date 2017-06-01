@@ -34,6 +34,13 @@
 
       	}
 
+      	  public static function borrarNoticiaId($idNoticia){
+      		$fechaN = htmlspecialchars(trim(strip_tags($idNoticia)));
+
+      		 DN::borraNoticiaId($idNoticia);
+
+      	}
+
       	public static function getListaNoticia(){
       	  $lista = DN::listaNoticias();
 	      $array = new ArrayObject();
