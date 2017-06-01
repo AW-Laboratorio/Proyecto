@@ -22,7 +22,7 @@
 
 		<div class = "cuerpo">
           <div class = "contenidoAdmin">
-                <form action="includes/Formularios/formAddMedico.php" method="post">
+                <form action="includes/Formularios/formRegistro.php" method="post">
         
           <div>
               <label for="nombre" class="align">* Nombre :</label>
@@ -35,18 +35,21 @@
           </div>
 
           <div>
-              <label for="sexo" class="align">* Especialidad : </label>
-              <input type="text" id="especialidad" name="especialidad" placeholder="Introducir Especialidad" required/>
+              <label for="sexo" class="align">* Sexo : </label>
+              <input type="radio" id="sexo_H" name="sexo" value="Hombre" /> <label for="sexo_H">Hombre</label>
+              <input type="radio" id="sexo_M" name="sexo" value="Mujer" id="sexo_H" /> <label for="sexo_M">Mujer</label>
           </div>
 
           <div>
               <label for="dni" class="align">* DNI : </label>
               <input type="text" id="dni" name = "dni" placeholder="Introducir DNI" minlength="9"  maxlength="9" required/>
+              <img id="dniNO" src="img/no.png" hidden="true">
+            <img id="dniOk" src="img/ok.png" hidden="true">
           </div>
 
           <div>
-              <label for="consulta" class="align">* Consulta :</label>
-              <input type="date" id="consulta" name="consulta" minlength="2"  maxlength="2" required/>
+              <label for="fecha_nacimiento" class="align">* Fecha nacimiento :</label>
+              <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required/>
           </div>
        
           <div>
@@ -57,11 +60,18 @@
           <div>
               <label for="email_addr" class="align">* Correo electrónico :</label>
               <input type="email" id="email" name="email" placeholder="Introducir Correo" required/>
+              <img id="emailNO" src="img/no.png" hidden="true">
+            <img id="emailOk" src="img/ok.png" hidden="true">
           </div>
 
           <div>
-              <label for="numcol" class="align">* Número de colegiado :</label>
-              <input type="text" id="numcol" name="numcol" placeholder="Introducir Número Colegiado" minlength="10"  maxlength="10" required/>
+              <label for="direccion" class="align">* Dirección :</label>
+              <input type="text" id="direccion" name="direccion" placeholder="Introducir Dirección" required/>
+          </div>
+          
+          <div>
+              <label for="num_seg_social" class="align">* Número de afiliado :</label>
+              <input type="text" id="num_seg_social" name="num_seg_social" placeholder="Introducir Número Afiliado" minlength="10"  maxlength="10" required/>
           </div>
 
           <div>
@@ -70,7 +80,14 @@
               <p>(*) La contraseña debe tener al menos 6 caracteres.</p>
           </div>
           
-          <button type="submit" class="validar"">Añadir médico</button>
+          <div>
+              <label for="repcontraseña" class="align">* Repetir Contraseña:</label>
+              <input type="password" id="repcontraseña" name="repcontraseña" placeholder="Repetir Contraseña" minlength="6" pattern="[A-Za-z0-9@#$%]{6,20}" title="Una contraseña válida es una cadena con una longitud entre 6 y 20 caracteres, donde cada uno consiste en una letra mayúscula o minúscula, un dígito, o los símboloss '@', '#', '$' y '%'" required/>
+              <img id="passIgualesNO" src="img/no.png" hidden="true">
+            <img id="passIgualesOk" src="img/ok.png" hidden="true">
+            <p>(**) Los campos con * son obligatorios. </p>
+          </div>
+          <button type="submit" class="validar"">Registrar</button>
           </form>
           </div>
           

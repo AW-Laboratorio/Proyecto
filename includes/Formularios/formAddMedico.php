@@ -9,7 +9,7 @@
    // $lista2 = new GestorPacientes();
     $dni = $_POST['dni'];
     $pass = $_POST['pass'];
-    $numSS = $_POST['num_seg_social'];
+    $numCol = $_POST['numcol'];
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellido'];
     $especialidad = $_POST['especialidad'];

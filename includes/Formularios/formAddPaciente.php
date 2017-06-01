@@ -3,7 +3,7 @@
     //require_once '/../ModelScripts/GestorUsuarios.php';
     //require_once '/../ModelScripts/GestorPacientes.php';
     use \estatica\includes\ModelScripts\GestorUsuarios as GU;
-    use \estatica\includes\ModelScripts\GestorMedicos as GM;
+    use \estatica\includes\ModelScripts\GestorPacientes as GP;
 
     //$lista = new GestorUsuarios();
    // $lista2 = new GestorPacientes();
@@ -12,14 +12,14 @@
     $numSS = $_POST['num_seg_social'];
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellido'];
-    $especialidad = $_POST['especialidad'];
-    $consulta = $_POST['consulta'];
+    $sexo = $_POST['sexo'];
+    $fechaN = $_POST['fecha_nacimiento'];
     $tfno = $_POST['telefono'];
     $email = $_POST['email'];
-    $numCol = $_POST['numcol'];
+    $dir = $_POST['direccion'];
 
-    GU::insertarUsuarioMedico($dni, $pass);
-    GM::insertarMedico($numCol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad);
-
+    GU::insertarUsuario($dni, $pass); //$lista->insertarUsuario($dni, $pass);
+    GP::insertarPaciente($numSS, $nombre, $apellidos, $dir, $dni, $email, $tfno, $fechaN, $sexo);//$lista2->
     
+    header("Location: ../../panelAdministracion.php");
  ?>
