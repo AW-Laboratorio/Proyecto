@@ -37,7 +37,7 @@
             <div>
             <div class = "modifica">
             <div>
-              <form action="includes/Formularios/formModificaTfnoM.php" method="post">
+              <form action="includes/Formularios/formModificaTelefonoM.php" method="post">
                 <fieldset>
                 <legend>Modificar Teléfono</legend>
                 <label for="Telefono" class="align">Nuevo teléfono :</label>

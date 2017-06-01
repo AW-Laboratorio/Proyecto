@@ -1,7 +1,7 @@
 <?php
 	require_once '/../config.php';
 	//require_once '/../ModelScripts/GestorPacientes.php';
-	use \estatica\includes\ModelScripts\Medicos as GM;
+	use \estatica\includes\ModelScripts\GestorMedicos as GM;
 	//$lista = new GestorPacientes();
 	$consulta = $_POST['consulta'];
 	$dni = $_POST['dni'];
