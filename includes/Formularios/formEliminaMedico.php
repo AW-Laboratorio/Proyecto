@@ -5,10 +5,10 @@
 	//require_once '/../ModelScripts/GestorUsuarios.php';
 
 	//$lista = new GestorUsuarios();
-	$dni = $_POST['dni'];
+	$dni = $_GET['data'];
 	GU::borrarUsuario($dni);
 	GM::borraMedico($dni);
 
-	header("Location: ../../index.php");
+	header("Location: ../../panelAdministracion.php");
 		
  ?>

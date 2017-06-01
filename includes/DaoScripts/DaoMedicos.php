@@ -35,7 +35,7 @@
 		public static function eliminaMedico($dni){
 			$app = App::getSingleton();
 			$con = $app->conexionBd();
-			$sql = "DELETE * FROM medicos WHERE DNI = '$dni'";
+			$sql = "DELETE FROM medicos WHERE DNI = '$dni'";
 			$con->query($sql) or die ($con->error);
 		}
 

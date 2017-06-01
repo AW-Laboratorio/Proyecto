@@ -46,7 +46,7 @@
 
           <div>
               <label for="consulta" class="align">* Consulta :</label>
-              <input type="date" id="consulta" name="consulta" minlength="2"  maxlength="2" required/>
+              <input type="text" id="consulta" name="consulta" placeholder="Introducir Consulta" minlength="2"  maxlength="2" required/>
           </div>
        
           <div>
