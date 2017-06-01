@@ -39,6 +39,9 @@
 				<div class = "adminFotos">
 					<a href="adminForo.php"><img src="img/foroAdmin.jpg"></a><p>Foro</p>
 				</div>
+				<div class = "adminFotos">
+					<a href="adminNoticias.php"><img src="img/noticiasadmin.jpg"></a><p>Noticias</p>
+				</div>
 			</div>
 		</div>
 	
