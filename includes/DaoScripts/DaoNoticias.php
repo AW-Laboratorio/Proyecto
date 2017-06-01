@@ -53,6 +53,13 @@
 			$con->query($sql) or die ($con->error);
 		}
 
+		public static function borraNoticiaId($idNoticia){
+			$app = App::getSingleton();
+			$con = $app->conexionBd();
+            $sql = "DELETE FROM noticias WHERE  idNoticia='$idNoticia'";
+			$con->query($sql) or die ($con->error);
+		}
+
 		
 		public static function cogeUltimaNoticia(){
 			$app = App::getSingleton();

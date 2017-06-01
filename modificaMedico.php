@@ -66,7 +66,7 @@
             <div>
               <form action="includes/Formularios/formModificaConsulta.php" method="post">
                 <fieldset>
-                <legend>Modificar Teléfono</legend>
+                <legend>Modificar Consulta</legend>
                 <label for="consulta" class="align">Nuevo consulta :</label>
                   <input type="text" id="consulta" name="consulta" placeholder="Introducir nueva consulta" minlength="1" maxlength="2" required/>
                   <input type="text" id="dni" name="dni" value="<?php echo $dni;?>" hidden/>
