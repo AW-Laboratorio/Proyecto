@@ -59,6 +59,35 @@ EOS;
 
         }
 
+        public static function listaNoticiasAdmin(){
+            $lista = GN::getListaNoticia();//$this->ListaNoticias->getListaNoticia();
+            $iterator = $lista->getIterator();
+
+            while($iterator->valid()){
+
+                $id = $iterator->current()->getIdNoticia();
+                $fecha = $iterator->current()->getFecha();
+                $titulo = $iterator->current()->getTitulo();
+                $texto = $iterator->current()->getTexto();
+                $html = <<<EOS
+
+                <div class = "cajaCita">
+                    <div class="noticia">
+                        <h5>$fecha</h5>
+                        <h4><a href="#"> $titulo</a></h4>
+                        <p>$texto</p>
+                        <a href = "includes/Formularios/formModificaNoticia.php?data=$fecha"><button type = "submit" class="cambio">Modificar</button></a>
+                        <a href = "includes/Formularios/formEliminaNoticia.php?data=$fecha"><button type = "submit" class="anular">Eliminar</button></a>
+                    </div>
+                </div>
+
+EOS;
+            echo $html;
+            $iterator->next();
+            }
+
+        }
+
 
 
 	}
