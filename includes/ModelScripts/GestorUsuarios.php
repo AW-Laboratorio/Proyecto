@@ -88,6 +88,15 @@
 			}
 		}
 
+		public static function insertarUsuarioMedico($dni, $pass){
+          	$dniN = htmlspecialchars(trim(strip_tags($dni)));
+	      	$passN = htmlspecialchars(trim(strip_tags($pass)));
+
+	        $rolN = "Medico";
+		    DU::insertaUsuario($dniN, $passN, $rolN);
+		         	
+      	}
+
 	}
 
 ?>

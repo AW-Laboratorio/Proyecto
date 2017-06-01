@@ -25,10 +25,10 @@
 			return false;
 		}
 
-		public static function insertaMedico($numSS, $nombre, $apellidos, $dir, $dni, $email, $tfno, $fechaN, $sexo){
+		public static function insertaMedico($numcol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad){
 			$app = App::getSingleton();
 			$con = $app->conexionBd();
-			$sql = "INSERT INTO medicos (NumAfiliado, Nombre, Apellidos, Direccion, DNI, Correo, Telefono, FechaNac, Sexo) VALUES ($numSS, $nombre, $apellidos, $dir, $dni, $email, $tfno, $fechaN, $sexo)";
+			$sql = "INSERT INTO medicos (NumColegiado, Nombre, Apellidos, DNI, Consulta, Telefono, Correo, Especialidad) VALUES ($numcol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad)";
 			$rs = $con->query($sql) or die ($con->error);
 		}
 

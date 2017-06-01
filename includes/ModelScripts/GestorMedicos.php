@@ -82,6 +82,27 @@
       		$dniN = htmlspecialchars(trim(strip_tags($dni)));
 			return (DM::eliminaMedico($dniN));
       	}
+
+      	public static function insertarMedico($numcol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad){
+          	$numcolN = htmlspecialchars(trim(strip_tags($numcol)));
+	      	$nombreN = htmlspecialchars(trim(strip_tags($nombre)));
+	      	$apellidosN = htmlspecialchars(trim(strip_tags($apellidos)));
+	        $dniN = htmlspecialchars(trim(strip_tags($dni)));
+	        $emailN = htmlspecialchars(trim(strip_tags($email)));
+	        $tfnoN = htmlspecialchars(trim(strip_tags($tfno)));
+	        $consultaN = htmlspecialchars(trim(strip_tags($consulta)));
+	        $especialidadN = htmlspecialchars(trim(strip_tags($especialidad)));
+
+	        if(DP::existePaciente($dniN) == 0)
+	        {
+	          	DP::insertaPaciente($numcolN, $nombreN, $apellidosN, $dniN, $emailN, $tfnoN, $consultaN, $especialidadN);
+	         	return true;
+	      	}   
+	        else
+	        {
+	          return false;
+	        }
+      	}
 	}
 
 ?>
