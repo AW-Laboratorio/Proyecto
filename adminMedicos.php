@@ -28,6 +28,7 @@
 
                   MV::listaMedicos();
                 ?>
+                <a href = "addMedico.php"><button type = "submit" class="validar">Añadir Médico</button></a>
                 <a href = "panelAdministracion.php"><button type = "submit" class="validar">Volver al panel de administración</button></a>
           </div>
           

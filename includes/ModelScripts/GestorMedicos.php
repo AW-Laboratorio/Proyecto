@@ -75,7 +75,7 @@
       	public static function modificaConsulta($consulta, $dni){
       		$consultaN = htmlspecialchars(trim(strip_tags($consulta)));
       		$dniN = htmlspecialchars(trim(strip_tags($dni)));
-			return (DM::modificaTelefono($consulta, $dniN));
+			return (DM::modificaConsulta($consulta, $dniN));
       	}
 
       	public static function borraMedico($dni){
