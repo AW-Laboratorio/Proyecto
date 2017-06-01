@@ -22,7 +22,7 @@
 
 		<div class = "cuerpo">
           <div class = "contenidoAdmin">
-                <form action="includes/Formularios/formRegistro.php" method="post">
+                <form action="includes/Formularios/formAddPaciente.php" method="post">
         
           <div>
               <label for="nombre" class="align">* Nombre :</label>
@@ -79,15 +79,7 @@
               <input type="password" id="pass" name="pass" placeholder="Introducir Contraseña" minlength="6" pattern="[A-Za-z0-9@#$%]{6,20}" title="Una contraseña válida es una cadena con una longitud entre 6 y 20 caracteres, donde cada uno consiste en una letra mayúscula o minúscula, un dígito, o los símboloss '@', '#', '$' y '%'" required/>
               <p>(*) La contraseña debe tener al menos 6 caracteres.</p>
           </div>
-          
-          <div>
-              <label for="repcontraseña" class="align">* Repetir Contraseña:</label>
-              <input type="password" id="repcontraseña" name="repcontraseña" placeholder="Repetir Contraseña" minlength="6" pattern="[A-Za-z0-9@#$%]{6,20}" title="Una contraseña válida es una cadena con una longitud entre 6 y 20 caracteres, donde cada uno consiste en una letra mayúscula o minúscula, un dígito, o los símboloss '@', '#', '$' y '%'" required/>
-              <img id="passIgualesNO" src="img/no.png" hidden="true">
-            <img id="passIgualesOk" src="img/ok.png" hidden="true">
-            <p>(**) Los campos con * son obligatorios. </p>
-          </div>
-          <button type="submit" class="validar"">Registrar</button>
+          <button type="submit" class="validar"">Añadir Paciente</button>
           </form>
           </div>
           

@@ -63,6 +63,7 @@ EOS;
 			$id = $iterator->current()->getIdPaciente();
 			$nombre = $iterator->current()->getNombre();
 			$apellidos = $iterator->current()->getApellidos();
+			$dni = $iterator->current()->getDni();
 			$html = <<<EOS
 
 				<div class = "alinearContenido">
@@ -72,8 +73,8 @@ EOS;
 								
 							<div class="datos">Nombre: $nombre</div>
 							<div class="datos">Apellidos: $apellidos</div>
-							<a href = "includes/Formularios/formModificaPaciente.php?data=$id"><button type = "submit" class="cambio">Modificar</button></a>
-							<a href = "includes/Formularios/formDarBaja.php?data=$id"><button type = "submit" class="anular">Eliminar</button></a>
+							<a href = "modificaPaciente.php?data=$dni"><button type = "submit" class="cambio">Modificar</button></a>
+							<a href = "includes/Formularios/formDarBaja.php?data=$dni"><button type = "submit" class="anular">Eliminar</button></a>
 						</div>
 					</div>
 				</div>
