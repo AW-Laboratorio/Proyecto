@@ -77,6 +77,11 @@
       		$dniN = htmlspecialchars(trim(strip_tags($dni)));
 			return (DM::modificaTelefono($consulta, $dniN));
       	}
+
+      	public static function borraMedico($dni){
+      		$dniN = htmlspecialchars(trim(strip_tags($dni)));
+			return (DM::eliminaMedico($dniN));
+      	}
 	}
 
 ?>
