@@ -93,15 +93,8 @@
 	        $consultaN = htmlspecialchars(trim(strip_tags($consulta)));
 	        $especialidadN = htmlspecialchars(trim(strip_tags($especialidad)));
 
-	        if(DP::existePaciente($dniN) == 0)
-	        {
-	          	DP::insertaPaciente($numcolN, $nombreN, $apellidosN, $dniN, $emailN, $tfnoN, $consultaN, $especialidadN);
-	         	return true;
-	      	}   
-	        else
-	        {
-	          return false;
-	        }
+	        DM::insertaMedico($numcolN, $nombreN, $apellidosN, $dniN, $emailN, $tfnoN, $consultaN, $especialidadN);
+	        
       	}
 	}
 
