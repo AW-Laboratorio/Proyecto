@@ -155,6 +155,26 @@
 			} 
 		}
 
+		public static function modificaEmail($email, $dni){
+			$app = App::getSingleton();
+			$con = $app->conexionBd();
+			$sql = sprintf("UPDATE medicos SET Correo = '$email' WHERE DNI = '$dni'");
+			$con->query($sql);
+		}
+
+		public static function modificaTelefono($tfno, $dni){
+			$app = App::getSingleton();
+			$con = $app->conexionBd();
+			$sql = sprintf("UPDATE medicos SET Telefono = '$tfno' WHERE DNI = '$dni'");
+			$con->query($sql);
+		}
+
+		public static function modificaConsulta($consulta, $dni){
+			$app = App::getSingleton();
+			$con = $app->conexionBd();
+			$sql = sprintf("UPDATE medicos SET Consulta = '$consulta' WHERE DNI = '$dni'");
+			$con->query($sql);
+		}
 	}
 
 ?>

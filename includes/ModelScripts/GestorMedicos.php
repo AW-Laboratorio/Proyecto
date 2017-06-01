@@ -59,6 +59,24 @@
 	      return $array;
 
       	}
+
+      	public static function modificaEmail($email, $dni){
+      		$emailN = htmlspecialchars(trim(strip_tags($email)));
+      		$dniN = htmlspecialchars(trim(strip_tags($dni)));
+			return (DM::modificaEmail($emailN, $dniN));
+      	}
+
+      	public static function modificaTelefono($tfno, $dni){
+      		$tfnoN = htmlspecialchars(trim(strip_tags($tfno)));
+      		$dniN = htmlspecialchars(trim(strip_tags($dni)));
+			return (DM::modificaTelefono($tfnoN, $dniN));
+      	}
+
+      	public static function modificaConsulta($consulta, $dni){
+      		$consultaN = htmlspecialchars(trim(strip_tags($consulta)));
+      		$dniN = htmlspecialchars(trim(strip_tags($dni)));
+			return (DM::modificaTelefono($consulta, $dniN));
+      	}
 	}
 
 ?>
