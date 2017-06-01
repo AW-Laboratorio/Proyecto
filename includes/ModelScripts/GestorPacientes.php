@@ -3,6 +3,7 @@
 	/*require_once '/../DaoScripts/DaoPacientes.php';*/
 	namespace estatica\includes\ModelScripts;
 	use \estatica\includes\DaoScripts\DaoPacientes as DP;
+	use ArrayObject;
 	
 	class GestorPacientes{
 
@@ -77,6 +78,16 @@
 			$emailN = htmlspecialchars(trim(strip_tags($email)));
 			return (DP::existeEmail($emailN));
 		}
+
+		public static function getListaPaciente(){
+      	  $lista = DP::listaPaciente();
+	      $array = new ArrayObject();
+	     	for($i= 0; $i <sizeof($lista)-1 ; $i++){
+	     	 	$array->append(new Paciente($lista[$i]['IdPaciente'], $lista[$i]['NumAfiliado'],$lista[$i]['Nombre'], $lista[$i]['Apellidos'], $lista[$i]['Direccion'], $lista[$i]['DNI'], $lista[$i]['Correo'], $lista[$i]['Telefono'], $lista[$i]['FechaNac'], $lista[$i]['Sexo']));
+	  	  	}
+	      return $array;
+
+      	}
 	}
 
 ?>

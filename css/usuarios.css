@@ -495,7 +495,20 @@ input[type=date], input[type=tel], input[type=text], input[type=email],input[typ
 }
 
 .adminFotos{
-    margin: 30px;
-    padding: 10px;
+    margin: 15px;
+    padding: 15px;
+    margin-left: 50px;
     display: inline-block;
+}
+
+.boton_modificar{
+    width: 25%;
+    background-color: #008000;
+    color: white;
+    font-size: 16px;
+    margin-left: 20%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    display: inline;
 }

@@ -53,6 +53,12 @@ class DaoInforme
         $con->query($sql);
     }
 
+    public static function listaInforme(){
+            $app = App::getSingleton();
+            $con = $app->conexionBd();
+            $sql =sprintf("SELECT * FROM informes ORDER BY Nombre DESC");
+    }
+
     public static function historial($afiliado){
         $app = App::getSingleton();
             $con = $app->conexionBd();
@@ -64,7 +70,6 @@ class DaoInforme
                 $rs->free();
                 return($lista);
             } 
-    }
+        }
     
-
 }

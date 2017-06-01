@@ -53,6 +53,36 @@
 EOS;
 			echo $html;
 		}
+
+		public static function listaPacientes(){
+            $lista = GP::getListaPaciente();
+            $iterator = $lista->getIterator();
+
+            while($iterator->valid()){
+
+			$id = $iterator->current()->getIdPaciente();
+			$nombre = $iterator->current()->getNombre();
+			$apellidos = $iterator->current()->getApellidos();
+			$html = <<<EOS
+
+				<div class = "alinearContenido">
+					<div class = "datosP1">
+						<div class = "cajaCita">
+							<h1>Paciente</h1>
+								
+							<div class="datos">Nombre: $nombre</div>
+							<div class="datos">Apellidos: $apellidos</div>
+							<a href = "includes/Formularios/formModificaPaciente.php?data=$id"><button type = "submit" class="cambio">Modificar</button></a>
+							<a href = "includes/Formularios/formDarBaja.php?data=$id"><button type = "submit" class="anular">Eliminar</button></a>
+						</div>
+					</div>
+				</div>
+EOS;
+			echo $html;
+			$iterator->next();
+		}
+
+		}
 		
 	}
 

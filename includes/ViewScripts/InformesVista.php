@@ -150,6 +150,35 @@ EOS;
             echo $html;
         }
 
+        public static function listaInformes(){
+            $lista = GM::getListaInformes();
+            $iterator = $lista->getIterator();
+
+            while($iterator->valid()){
+
+            $nombre = $paciente->current()->getNombre();
+            $apellidos = $paciente->current()->getApellidos();
+            $nif=$paciente->current()->current()->getDni();
+            $fechaN=$paciente->current()->getFechaN();
+            $sexo=$paciente->current()->getSexo();
+            $telefono = $paciente->current()->getTfno();
+            $dir = $paciente->current()->getDir();
+            //Datos del informe
+            $informe = GI::buscaInforme($idInforme);
+            $numC = $informe->current()->getNumColegiado();
+            $motivo = $informe->gcurrent()->etMotivo();
+            $reacciones=$informe->current()->getReacciones();
+            $rx=$informe->current()->getRx();
+            $diagnostico=$informe->current()->getDiagnostico();
+            $tratamiento=$informe->current()->getTratamiento();
+            //Datos del medico
+            $medico=GM::buscaMedico($numC);
+            $nombreM=$medico->current()->getNombre();
+            $apellidosM=$medico->current()->getApellidos();
+            $html = <<<EOS
+
+                <div class="datosPaciente">
+
         public static function verInformePaciente($afiliado, $idInforme){
             //Datos del paciente
             $paciente = GP::buscaPaciente($afiliado);
@@ -233,10 +262,26 @@ EOS;
                             </div>
                         </div>
                     </div>
-
+                    <form action="informeMod.php" method="post">
+                        <input type="text" id="numA" name="numA" value="$afiliado" hidden>
+                        <input type="text" id="numC" name="numC" value="$numC" hidden>
+                        <input type="text" id="motivo" name="motivo" value="$motivo" hidden>
+                        <input type="text" id="rea" name="rea" value="$reacciones" hidden>
+                        <input type="text" id="rx" name="rx" value="$rx" hidden>
+                        <input type="text" id="diag" name="diag" value="$diagnostico" hidden>
+                        <input type="text" id="trat" name="trat" value="$tratamiento" hidden>
+                        <input type="text" id="idinf" name="idinf" value="$idInforme" hidden>
+                        <button class="boton_enviar" type="submit">Modificar Informe</button>
+                    </form>
 EOS;
             echo $html;
+            $iterator->next();
         }
+
+        }
+
+        
+    }
 
         public static function historial($afiliado){
             $lista = GI::historial($afiliado); //$this->ListaForo->getListaForo();

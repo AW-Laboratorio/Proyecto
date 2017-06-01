@@ -28,12 +28,10 @@
 					    	<textarea name="msj" id="msj" placeholder="Escribe tu comentario aqui.." required></textarea>
 						</div>
 					</div>
-					<div class="boton_enviar">
 						<?php $idforo = $_REQUEST['data']; $tema=$_REQUEST['tema'];?>
 						<input type="text" id="foro" name="foro" value="<?php echo $idforo;?>" hidden/>
 						<input type="text" id="tema" name="tema" value="<?php echo $tema;?>" hidden/>
 						<button type= "submit" class = "add">Añadir comentario</button>
-					</div>
 				</form>
 			</div>
 		</div>
