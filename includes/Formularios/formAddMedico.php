@@ -21,5 +21,7 @@
     GU::insertarUsuarioMedico($dni, $pass);
     GM::insertarMedico($numCol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad);
 
+    header("Location: ../../panelAdministracion.php");
+
     
  ?>

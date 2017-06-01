@@ -46,7 +46,7 @@
 
           <div>
               <label for="consulta" class="align">* Consulta :</label>
-              <input type="date" id="consulta" name="consulta" minlength="2"  maxlength="2" required/>
+              <input type="text" id="consulta" name="consulta" placeholder="Introducir Consulta" minlength="2"  maxlength="2" required/>
           </div>
        
           <div>
@@ -61,7 +61,7 @@
 
           <div>
               <label for="numcol" class="align">* Número de colegiado :</label>
-              <input type="text" id="numcol" name="numcol" placeholder="Introducir Número Afiliado" minlength="10"  maxlength="10" required/>
+              <input type="text" id="numcol" name="numcol" placeholder="Introducir Número Colegiado" minlength="10"  maxlength="10" required/>
           </div>
 
           <div>
