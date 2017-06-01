@@ -67,11 +67,14 @@ EOS;
 
 				<div class = "alinearContenido">
 					<div class = "datosP1">
-					<h1>Paciente/a</h1>
-						<form action="includes/Formularios/formModificaDatosM.php" method="post">
+						<div class = "cajaCita">
+							<h1>Paciente</h1>
+								
 							<div class="datos">Nombre: $nombre</div>
-							<div class="datos">Apellidos: $apellidos</div>	
-						</form>
+							<div class="datos">Apellidos: $apellidos</div>
+							<a href = "includes/Formularios/formModificaPaciente.php?data=$id"><button type = "submit" class="cambio">Modificar</button></a>
+							<a href = "includes/Formularios/formDarBaja.php?data=$id"><button type = "submit" class="anular">Eliminar</button></a>
+						</div>
 					</div>
 				</div>
 EOS;

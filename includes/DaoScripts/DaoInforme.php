@@ -57,6 +57,8 @@ class DaoInforme
             $app = App::getSingleton();
             $con = $app->conexionBd();
             $sql =sprintf("SELECT * FROM informes ORDER BY Nombre DESC");
+    }
+
     public static function historial($afiliado){
         $app = App::getSingleton();
             $con = $app->conexionBd();
@@ -69,7 +71,5 @@ class DaoInforme
                 return($lista);
             } 
         }
-    }
     
-
 }

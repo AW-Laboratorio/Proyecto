@@ -28,8 +28,7 @@
 
                   PV::listaPacientes();
                 ?>
-                <a href="modifPacientes.php"><input type="button" value="Modificar" class="boton_modificar";"/>
-                <input type="button" value="Eliminar" class="boton_eliminar";"/>
+                <a href = "panelAdministracion.php"><button type = "submit" class="validar">Volver al panel de administración</button></a>
           </div>
           
   		</div>

@@ -501,16 +501,14 @@ input[type=date], input[type=tel], input[type=text], input[type=email],input[typ
     display: inline-block;
 }
 
-.boton_modificar, .boton_eliminar{
-    display: block;
-    background-color:#599bb3;
-    border-radius:8px;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:18px;
-    font-weight:bold;
-    padding:10px 10px;
+.boton_modificar{
+    width: 25%;
+    background-color: #008000;
+    color: white;
+    font-size: 16px;
     margin-left: 20%;
-    margin-top: 5%;
-    display: inline-block;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    display: inline;
 }

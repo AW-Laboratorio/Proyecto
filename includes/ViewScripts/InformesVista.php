@@ -283,10 +283,6 @@ EOS;
         
     }
 
-EOS;
-            echo $html;
-        }
-
         public static function historial($afiliado){
             $lista = GI::historial($afiliado); //$this->ListaForo->getListaForo();
             //Datos paciente
