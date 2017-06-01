@@ -28,7 +28,7 @@
 		public static function insertaMedico($numcol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad){
 			$app = App::getSingleton();
 			$con = $app->conexionBd();
-			$sql = "INSERT INTO medicos (NumColegiado, Nombre, Apellidos, DNI, Consulta, Telefono, Correo, Especialidad) VALUES ($numcol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad)";
+			$sql = "INSERT INTO medicos (NumColegiado, Nombre, Apellidos, DNI, Consulta, Telefono, Correo, Especialidad) VALUES ('$numcol', '$nombre', '$apellidos', '$dni', '$consulta', '$tfno', '$email', '$especialidad')";
 			$rs = $con->query($sql) or die ($con->error);
 		}
 

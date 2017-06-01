@@ -16,7 +16,6 @@
     $consulta = $_POST['consulta'];
     $tfno = $_POST['telefono'];
     $email = $_POST['email'];
-    $numCol = $_POST['numcol'];
 
     GU::insertarUsuarioMedico($dni, $pass);
     GM::insertarMedico($numCol, $nombre, $apellidos, $dni, $email, $tfno, $consulta, $especialidad);
