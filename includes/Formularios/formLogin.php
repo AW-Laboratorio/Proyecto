@@ -30,7 +30,7 @@
 			header("Location: ../../DatosMedico.php");
 		}elseif ($app->tieneRol('Admin')) {
 			//Es admin, va al panel de administracion
-			header("Location: ../../panelAdmin.php");
+			header("Location: ../../panelAdministracion.php");
 		}
 	}
  ?>

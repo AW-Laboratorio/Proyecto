@@ -313,9 +313,10 @@ EOS;
                 $medico=GM::buscaMedico($numC);
                 $nombreM=$medico->getNombre();
                 $apellidosM=$medico->getApellidos();
+                $especialidad = $medico->getEspecialidad();
                 $html = <<<EOS
                 
-                <div class = "cajaCita">
+                <div class = "cajaInforme">
                     <div class= "datos">
                         <div><h4>Motivo de la consulta</h4></div>
                         <div><p>$motivo</p></div>
